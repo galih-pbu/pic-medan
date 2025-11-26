@@ -33,10 +33,159 @@
             --color-accent1: #F8D68C;
             --color-accent2: #FF954B;
             --color-accent3: #CB3922;
+            --color-asia: #87000f;
+            --color-asia-light: #c50113;
+            --color-asia-accent: #ff6b6b;
 
             --font-primary: 'Playfair Display', serif;
             --font-secondary: 'Inter', sans-serif;
             --swiper-theme-color: var(--color-accent1);
+        }
+
+        /* Asia cluster specific styling */
+        .product-card.cluster-asia .text-primary,
+        .product-card.cluster-asia i.text-primary {
+            color: var(--color-asia-accent) !important;
+        }
+
+        .product-card.cluster-asia .btn-primary {
+            background-color: var(--color-asia);
+            border-color: var(--color-asia);
+        }
+
+        .product-card.cluster-asia .btn-primary:hover {
+            background-color: var(--color-asia-light);
+            border-color: var(--color-asia-light);
+        }
+
+        .product-card.cluster-asia .btn-outline-primary {
+            color: white;
+            border-color: var(--color-asia-accent);
+            border-width: 2px;
+        }
+
+        .product-card.cluster-asia .btn-outline-primary:hover {
+            background-color: var(--color-asia);
+            border-color: var(--color-asia-accent);
+            border-width: 2px;
+            color: white;
+        }
+
+        .product-card.cluster-asia .btn-outline-primary i {
+            color: white;
+        }
+
+        /* Modal Asia cluster styling */
+        .modal-content.cluster-asia .text-primary,
+        .modal-content.cluster-asia i.text-primary {
+            color: var(--color-asia-accent) !important;
+        }
+
+        .modal-content.cluster-asia .text-success {
+            color: var(--color-asia-accent) !important;
+        }
+
+        .modal-content.cluster-asia .btn-primary {
+            background-color: var(--color-asia);
+            border-color: var(--color-asia-accent);
+            border-width: 2px;
+        }
+
+        .modal-content.cluster-asia .btn-primary:hover {
+            background-color: var(--color-asia-light);
+            border-color: var(--color-asia-accent);
+            border-width: 2px;
+        }
+
+        .modal-content.cluster-asia .btn-primary i {
+            color: white;
+        }
+
+        /* Table specifications styling */
+        .specs-table {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .specs-table thead th {
+            font-weight: 600;
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .specs-table tbody tr {
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .specs-table tbody th,
+        .specs-table tbody td {
+            color: white;
+            border-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .specs-table tbody tr:nth-of-type(odd) th,
+        .specs-table tbody tr:nth-of-type(odd) td {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .specs-table tbody tr:hover th,
+        .specs-table tbody tr:hover td {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        /* Eropa cluster table */
+        .modal-content.cluster-eropa .specs-table thead {
+            background-color: #337FD7 !important;
+        }
+
+        .modal-content.cluster-eropa .specs-table thead th {
+            color: #ffffff !important;
+            background-color: #337FD7 !important;
+        }
+
+        .modal-content.cluster-eropa .specs-table tbody tr:hover th,
+        .modal-content.cluster-eropa .specs-table tbody tr:hover td {
+            background-color: rgba(51, 127, 215, 0.3);
+        }
+
+        /* Asia cluster table */
+        .modal-content.cluster-asia .specs-table thead {
+            background-color: #9e010f !important;
+        }
+
+        .modal-content.cluster-asia .specs-table thead th {
+            color: #ffffff !important;
+            background-color: #9e010f !important;
+        }
+
+        .modal-content.cluster-asia .specs-table tbody tr:hover th,
+        .modal-content.cluster-asia .specs-table tbody tr:hover td {
+            background-color: rgba(158, 1, 15, 0.3);
+        }
+
+        /* Icon colors for Asia cluster */
+        .product-card.cluster-asia .text-warning {
+            color: #ffd700 !important;
+        }
+
+        .product-card.cluster-asia .text-info {
+            color: #ff6b6b !important;
+        }
+
+        /* Tab styling for Asia cluster */
+        #product-filter-tabs .nav-link[data-filter="Asia"].active {
+            background-color: var(--color-asia) !important;
+            border-color: var(--color-asia) !important;
+        }
+
+        #product-filter-tabs .nav-link[data-filter="Asia"]:hover {
+            background-color: var(--color-asia-light);
+            color: white;
+        }
+
+        /* H5 price for Asia cluster */
+        .product-card.cluster-asia h5.text-primary {
+            color: var(--color-asia-accent) !important;
         }
 
         body {
@@ -97,7 +246,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            background-color: #0E2744;
+            background-color: var(--bs-primary);
         }
 
         .swiper-hero {
@@ -277,7 +426,7 @@
         }
 
         [data-bs-theme="dark"] .navbar.scrolled {
-            background-color: #0E2744 !important;
+            background-color: var(--bs-primary) !important;
         }
 
         .product-card {
@@ -817,7 +966,7 @@
                     <p class="lead text-muted">Pilihan properti terbaik yang dirancang untuk setiap kebutuhan.</p>
                 </div>
 
-                <!-- <ul class="nav nav-pills justify-content-center mb-5" id="product-filter-tabs" data-aos="fade-up"
+                <ul class="nav nav-pills justify-content-center mb-5" id="product-filter-tabs" data-aos="fade-up"
                     data-aos-delay="100">
                     <li class="nav-item">
                         <a class="nav-link active" href="#" data-filter="Eropa">Cluster Eropa</a>
@@ -825,14 +974,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-filter="Asia">Cluster Asia</a>
                     </li>
-                </ul> -->
+                </ul>
                 <div id="productList" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
                     data-stagger-children="true">
                 </div>
             </div>
         </section>
 
-        <section class="py-5" style="background-color: #0E2744; color: #adb5bd;">
+        <section class="py-5" style="background-color: var(--bs-primary); color: #adb5bd;">
             <div class="container my-5">
                 <div class="text-center mb-5 animate-on-scroll">
                     <h2 class="section-title white">Lokasi Pesona Indah Cemara</h2>
@@ -867,7 +1016,7 @@
             </div>
         </section>
 
-        <section id="facilities2" class="py-5" style="background-color: #0E2744; color: #adb5bd;">
+        <section id="facilities2" class="py-5" style="background-color: var(--bs-primary); color: #adb5bd;">
             <div class="container my-5">
                 <div class="mt-5 pt-4 animate-on-scroll">
                     <div class="text-center mb-5">
@@ -932,7 +1081,7 @@
         </section>
     </main>
 
-    <footer class="py-5" style="background-color: #0E2744; color: #adb5bd;">
+    <footer class="py-5" style="background-color: var(--bs-primary); color: #adb5bd;">
         <div class="container text-center text-md-start">
             <div class="row gy-4">
                 <div class="col-lg-8 col-md-6">
@@ -969,7 +1118,7 @@
     <div class="modal fade" id="productDetailModal" tabindex="-1" aria-labelledby="productDetailModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable modal-detail">
-            <div class="modal-content" style="background-color: #0E2744;">
+            <div class="modal-content" style="background-color: var(--bs-primary);">
                 <div class="modal-header">
                     <h5 class="modal-title white" id="productDetailModalLabel">Detail Produk</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
@@ -1005,7 +1154,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <h5 class="white">Spesifikasi</h5>
-                            <table class="table table-sm table-striped table-bordered table-dark">
+                            <table class="table table-sm table-striped table-bordered specs-table">
                                 <thead>
                                     <tr>
                                         <th scope="col">Kategori</th>
@@ -2300,9 +2449,9 @@
 
                 // Asia
                 { gallery: ["product/asia/asia2.jpg", "product/asia/asia2_alt.jpg", "product/asia/gerbang_asia.jpg", "facilities/fas_cluster_alt.jpg", "facilities/fas_cluster_alt2.jpg"], description: "Fu 福 (Fortune) – Keberuntungan dan Awal Baru yang Penuh Harapan Hunian praktis dengan tata ruang efisien, ideal bagi keluarga muda yang ingin memulai kisah baru. Menghadirkan kenyamanan fungsional dan desain modern yang membawa energi positif." },
-                { gallery: ["product/asia/asia3.jpg", "product/asia/asia3_alt.jpg", "product/asia/gerbang_asia.jpg", "facilities/fas_cluster_alt.jpg", "facilities/fas_cluster_alt2.jpg"], description: "---" },
-                { gallery: ["product/asia/asia4.jpg", "product/asia/asia4_alt.jpg", "product/asia/gerbang_asia.jpg", "facilities/fas_cluster_alt.jpg", "facilities/fas_cluster_alt2.jpg"], description: "---" },
-                { gallery: ["product/asia/asia5.jpg", "product/asia/asia5_alt.jpg", "product/asia/gerbang_asia.jpg", "facilities/fas_cluster_alt.jpg", "facilities/fas_cluster_alt2.jpg"], description: "---" },
+                { gallery: ["product/asia/asia3.jpg", "product/asia/asia3_alt.jpg", "product/asia/gerbang_asia.jpg", "facilities/fas_cluster_alt.jpg", "facilities/fas_cluster_alt2.jpg"], description: "Xi 喜 (Serenity) – Sukacita dan Kehangatan dalam Setiap Sudut Rumah yang memancarkan keceriaan dan keharmonisan keluarga. Tata ruang yang hangat, interior cerah, dan area sosial yang menghubungkan kebersamaan. Dirancang untuk menciptakan momen bahagia setiap hari." },
+                { gallery: ["product/asia/asia4.jpg", "product/asia/asia4_alt.jpg", "product/asia/gerbang_asia.jpg", "facilities/fas_cluster_alt.jpg", "facilities/fas_cluster_alt2.jpg"], description: "Shou 寿 (Eternity) – Kehidupan Panjang dalam Ketenangan dan Alam Hunian yang memadukan udara segar, cahaya alami, dan keseimbangan ruang. Cocok bagi keluarga yang menginginkan suasana damai dan menenangkan. Desainnya menghadirkan keselarasan antara kenyamanan modern dan keindahan alam." },
+                { gallery: ["product/asia/asia5.jpg", "product/asia/asia5_alt.jpg", "product/asia/gerbang_asia.jpg", "facilities/fas_cluster_alt.jpg", "facilities/fas_cluster_alt2.jpg"], description: "Lu 禄 (Prosperity) – Kemakmuran yang Tumbuh Bersama Waktu Hunian luas dengan tata ruang elegan dan lingkungan prestisius. Dirancang yang mengutamakan kenyamanan dan nilai investasi tinggi. Lokasi strategis, akses mudah ke pusat kota, dan desain modern menjadikannya simbol kesuksesan hidup." },
                 { gallery: ["product/asia/asia1.jpg", "product/asia/asia1_alt.jpg", "product/asia/asia1_alt1.jpg", "product/asia/asia1_alt2.jpg", "product/asia/gerbang_asia.jpg"], description: "---" }
             ];
             // --- END DATA INJECTION ---
@@ -2498,9 +2647,12 @@
                     ].filter(Boolean).join('');
 
 
+                    const cardBgColor = p.cluster_type === 'asia' ? 'var(--color-asia)' : 'var(--bs-primary)';
+                    const clusterClass = p.cluster_type === 'asia' ? 'cluster-asia' : 'cluster-eropa';
+                    
                     productList.innerHTML += `
                     <div class="col-lg-4 col-md-6 animate-on-scroll">
-                        <div class="card product-card h-100 white" style="background-color: #0E2744;">
+                        <div class="card product-card h-100 white ${clusterClass}" style="background-color: ${cardBgColor};" data-cluster="${p.cluster_type}">
                             <img src="${p.image}" class="card-img-top img-blur" alt="${p.name}" style="height: 220px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x220?text=Gambar+Tidak+Tersedia'; this.alt='Placeholder Image';">
                             ${statusBadge}
                             <div class="card-body d-flex flex-column">
@@ -2724,6 +2876,15 @@
 
                 const product = productData.products[index];
                 const details = productDetails[index];
+
+                // Apply cluster-specific styling to modal
+                const modalContent = detailModal.querySelector('.modal-content');
+                const modalBgColor = product.cluster_type === 'asia' ? 'var(--color-asia)' : 'var(--bs-primary)';
+                modalContent.style.backgroundColor = modalBgColor;
+                
+                // Add cluster class to modal for icon colors
+                modalContent.classList.remove('cluster-asia', 'cluster-eropa');
+                modalContent.classList.add(product.cluster_type === 'asia' ? 'cluster-asia' : 'cluster-eropa');
 
                 currentModalProductName = product.name;
                 document.getElementById('modalProductName').textContent = product.name;
