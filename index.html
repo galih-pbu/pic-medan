@@ -1390,7 +1390,7 @@
                 if (index === 0) {
                     const slideHTML = `
               <div class="swiper-slide slide-with-video" data-swiper-autoplay="10000000">
-                        <video id="hero-video-player" class="hero-video" muted playsinline autoplay>
+                        <video id="hero-video-player" class="hero-video" muted playsinline controls preload="auto" webkit-playsinline x-webkit-airplay="allow">
                             <source src="carousel/pic_video.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
@@ -1632,15 +1632,43 @@
                         setTimeout(() => animateHeroText(swiper.slides[swiper.activeIndex]), 100);
                         
                         // Get video element and setup event listeners
-                        localVideoPlayer = document.getElementById('hero-video-player');
-                        if (localVideoPlayer) {
-                            // Event when video ends
-                            localVideoPlayer.addEventListener('ended', function() {
-                                if (heroSwiper) {
-                                    heroSwiper.slideNext();
-                                }
-                            });
-                        }
+                        setTimeout(() => {
+                            localVideoPlayer = document.getElementById('hero-video-player');
+                            if (localVideoPlayer) {
+                                // Event when video ends
+                                localVideoPlayer.addEventListener('ended', function() {
+                                    if (heroSwiper) {
+                                        heroSwiper.slideNext();
+                                    }
+                                });
+                                
+                                // Try to play video on mobile devices
+                                localVideoPlayer.addEventListener('loadedmetadata', function() {
+                                    const playPromise = localVideoPlayer.play();
+                                    if (playPromise !== undefined) {
+                                        playPromise.catch(error => {
+                                            console.log('Autoplay prevented, user interaction needed');
+                                        });
+                                    }
+                                });
+                                
+                                // For mobile devices - attempt to play when slide becomes active
+                                const observer = new IntersectionObserver((entries) => {
+                                    entries.forEach(entry => {
+                                        if (entry.isIntersecting && localVideoPlayer) {
+                                            const playPromise = localVideoPlayer.play();
+                                            if (playPromise !== undefined) {
+                                                playPromise.catch(error => {
+                                                    console.log('Play prevented:', error);
+                                                });
+                                            }
+                                        }
+                                    });
+                                }, { threshold: 0.5 });
+                                
+                                observer.observe(localVideoPlayer);
+                            }
+                        }, 500);
                         
                         // Cek slide aktif saat init
                         const activeSlide = swiper.slides[swiper.activeIndex];
@@ -1670,6 +1698,17 @@
 
                         if (activeSlide.classList.contains('slide-with-video')) {
                             swiper.autoplay.stop(); // Matikan autoplay Swiper
+                            // Try to play video when slide becomes active
+                            if (localVideoPlayer) {
+                                setTimeout(() => {
+                                    const playPromise = localVideoPlayer.play();
+                                    if (playPromise !== undefined) {
+                                        playPromise.catch(error => {
+                                            console.log('Play prevented on slide change');
+                                        });
+                                    }
+                                }, 300);
+                            }
                         } else {
                             swiper.autoplay.start(); // Hidupkan autoplay Swiper
                         }
