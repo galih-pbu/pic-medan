@@ -176,7 +176,12 @@
             margin-bottom: 5rem;
             padding: 0 1rem;
             max-width: 80vw;
-            ;
+        }
+
+        .hero-title.topTitle {
+            position: absolute;
+            left: 24px;
+            top: 24px;
         }
 
         .slide-content h1 {
@@ -939,8 +944,8 @@
                         mudah ke pusat kota. Sebuah kawasan terpadu yang dirancang untuk memberikan pengalaman hidup
                         yang berkelas dan berkelanjutan.</p>
                     <div class="mt-4">
-                        <a href="https://www.instagram.com/pic_medan/" target="_blank" class="text-white me-3"><i
-                                class="bi bi-instagram fs-4"></i></a>
+                        <a style="text-decoration:none" href="https://www.instagram.com/pic_medan/" target="_blank"
+                            class="text-white me-3"><i class="bi bi-instagram fs-4"></i> PIC_MEDAN</a>
                     </div>
                     <p class="pic_bold" style="margin-top: 1rem; margin-bottom: 0rem;">Pesona Indah Cemara</p>by <img
                         src="logo_asg.svg" alt="Logo ASG" class="me-2 logo" style="height: 14px;">
@@ -949,7 +954,7 @@
                     <h5 class="text-white">Hubungi Kami</h5>
                     <ul class="list-unstyled">
                         <li><i class="bi bi-telephone-fill me-2"></i> 0812-9090-7080</li>
-                        <li><i class="bi bi-envelope-fill me-2"></i> sales@picmedan.com</li>
+                        <li><i class="bi bi-envelope-fill me-2"></i> picmedanofficial@gmail.com</li>
                         <li><i class="bi bi-geo-alt-fill me-2"></i> Supermarket Brastagi, Jl. Cemara, Pulo Brayan
                             Bengkel Baru, Kec. Medan Tim., Kota Medan, Sumatera Utara</li>
                     </ul>
@@ -1055,84 +1060,137 @@
             const productData = {
                 "products": [
                     {
-                        "name": "Rukan Colosseum",
-                        "size": "75m²",
+                        "name": "Cambridge",
+                        "size": "90m²",
                         "project": "PIC MEDAN",
                         "cluster_type": "eropa",
                         "price_idr": null,
-                        "area": "262.5m²",
-                        "bedrooms": 0,
+                        "area": "129m²",
+                        "bedrooms": "3",
                         "bathrooms": "3",
-                        "floor": "3½",
-                        "carport": null,
-                        "image": "product/eropa/eropa1.jpg",
-                        "status": "available",
-                        "solar_heater": null,
-                        "ev_charger": null,
-                        "specification": {
-                            "SpesifikasiRukan": [
-                                { "Kategori": "Pondasi", "Subkategori": "Tiang Pancang", "Spesifikasi": "" },
-                                { "Kategori": "Struktur", "Subkategori": "Beton Bertulang", "Spesifikasi": "" },
-                                { "Kategori": "Atap", "Subkategori": "Rangka Atap", "Spesifikasi": "Baja Ringan" },
-                                { "Kategori": "Atap", "Subkategori": "Penutup Atap", "Spesifikasi": "Metal / Carbon Fibre Deck" },
-                                { "Kategori": "Plafon", "Subkategori": "Gypsum Board", "Spesifikasi": "Finishing Cat" },
-                                { "Kategori": "Dinding", "Subkategori": "Dinding Luar & Dalam", "Spesifikasi": "Bata Plester Finishing Cat" },
-                                { "Kategori": "Finishing Dinding", "Subkategori": "Dinding Dalam", "Spesifikasi": "Cat Interior" },
-                                { "Kategori": "Finishing Dinding", "Subkategori": "Dinding Luar", "Spesifikasi": "Cat Exterior (Weather Shield)" },
-                                { "Kategori": "Finishing Lantai", "Subkategori": "Kamar Mandi", "Spesifikasi": "Keramik 40x40" },
-                                { "Kategori": "Finishing Lantai", "Subkategori": "Ruang Utama", "Spesifikasi": "Homogeneous Tile 60x120" },
-                                { "Kategori": "Kusen", "Subkategori": "Aluminium / Kayu", "Spesifikasi": "" },
-                                { "Kategori": "Pintu", "Subkategori": "Pintu Aluminium Kaca", "Spesifikasi": "" },
-                                { "Kategori": "Jendela", "Subkategori": "Kaca Aluminium", "Spesifikasi": "" },
-                                { "Kategori": "Sanitair", "Subkategori": "Kamar Mandi", "Spesifikasi": "Ex. TOTO atau setara" },
-                                { "Kategori": "Sanitair", "Subkategori": "Wastafel", "Spesifikasi": "Ex. TOTO atau setara" },
-                                { "Kategori": "Instalasi", "Subkategori": "Daya Listrik", "Spesifikasi": "4400 W" },
-                                { "Kategori": "Instalasi", "Subkategori": "Instalasi Air", "Spesifikasi": "Instalasi air dengan kran" },
-                                { "Kategori": "Instalasi", "Subkategori": "Gas Negara", "Spesifikasi": "" },
-                                { "Kategori": "Lain-lain", "Subkategori": "Ground Tank & Roof Tank", "Spesifikasi": "" }
-                            ]
-                        }
-                    },
-                    {
-                        "name": "Amsterdam",
-                        "size": "150m²",
-                        "project": "PIC MEDAN",
-                        "cluster_type": "eropa",
-                        "price_idr": null,
-                        "area": "206m²",
-                        "bedrooms": "4+1",
-                        "bathrooms": "5+1",
                         "floor": "2",
-                        "carport": "3",
-                        "image": "product/eropa/eropa2.jpg",
+                        "carport": "2",
+                        "image": "product/eropa/eropa4.jpg",
                         "status": "available",
                         "solar_heater": "yes",
                         "ev_charger": "yes",
                         "specification": {
                             "SpesifikasiRumah": [
-                                { "Kategori": "Pondasi", "Subkategori": "Tiang Pancang", "Spesifikasi": "" },
-                                { "Kategori": "Struktur", "Subkategori": "Beton Bertulang", "Spesifikasi": "" },
-                                { "Kategori": "Atap", "Subkategori": "Rangka Atap", "Spesifikasi": "Baja Ringan" },
-                                { "Kategori": "Atap", "Subkategori": "Penutup Atap", "Spesifikasi": "Genteng Bitumen" },
-                                { "Kategori": "Plafon", "Subkategori": "Gypsum Board ", "Spesifikasi": "Finishing Cat" },
-                                { "Kategori": "Dinding", "Subkategori": "Dinding Luar & Dalam", "Spesifikasi": "Bata Plester Finishing Cat" },
-                                { "Kategori": "Dinding", "Subkategori": "Double Wall", "Spesifikasi": "" },
-                                { "Kategori": "Finishing Dinding", "Subkategori": "Dinding Dalam", "Spesifikasi": "Cat Interior" },
-                                { "Kategori": "Finishing Dinding", "Subkategori": "Dinding Luar", "Spesifikasi": "Cat Exterior (Weather Shield)" },
-                                { "Kategori": "Finishing Lantai", "Subkategori": "Kamar Mandi", "Spesifikasi": "Homogeneous Tile 60x60" },
-                                { "Kategori": "Finishing Lantai", "Subkategori": "Ruang Tamu & Tidur", "Spesifikasi": "Homogeneous Tile 60x120" },
-                                { "Kategori": "Kusen", "Subkategori": "Aluminium / Kayu", "Spesifikasi": "" },
-                                { "Kategori": "Pintu", "Subkategori": "Engineering Door", "Spesifikasi": "" },
-                                { "Kategori": "Pintu", "Subkategori": "Smart Door Lock", "Spesifikasi": "" },
-                                { "Kategori": "Jendela", "Subkategori": "Kaca Aluminium", "Spesifikasi": "" },
-                                { "Kategori": "Sanitair", "Subkategori": "Kamar Mandi", "Spesifikasi": "Ex. TOTO atau setara" },
-                                { "Kategori": "Sanitair", "Subkategori": "Meja Dapur", "Spesifikasi": "SINK 1 Lubang dengan kran" },
-                                { "Kategori": "Instalasi", "Subkategori": "Instalasi Charger Mobil Listrik", "Spesifikasi": "" },
-                                { "Kategori": "Instalasi", "Subkategori": "Daya Listrik", "Spesifikasi": "4400 W" },
-                                { "Kategori": "Instalasi", "Subkategori": "Instalasi Air", "Spesifikasi": "Instalasi Air dengan Kran" },
-                                { "Kategori": "Instalasi", "Subkategori": "AC", "Spesifikasi": "" },
-                                { "Kategori": "Lain-lain", "Subkategori": "Solar Water Heater", "Spesifikasi": "" },
-                                { "Kategori": "Lain-lain", "Subkategori": "Ground Tank & Roof Tank", "Spesifikasi": "" }
+                                {
+                                    "Kategori": "Pondasi",
+                                    "Subkategori": "Tiang Pancang",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Struktur",
+                                    "Subkategori": "Beton Bertulang",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Atap",
+                                    "Subkategori": "Rangka Atap",
+                                    "Spesifikasi": "Baja Ringan"
+                                },
+                                {
+                                    "Kategori": "Atap",
+                                    "Subkategori": "Penutup Atap",
+                                    "Spesifikasi": "Genteng Bitumen"
+                                },
+                                {
+                                    "Kategori": "Plafon",
+                                    "Subkategori": "Gypsum Board ",
+                                    "Spesifikasi": "Finishing Cat"
+                                },
+                                {
+                                    "Kategori": "Dinding",
+                                    "Subkategori": "Dinding Luar & Dalam",
+                                    "Spesifikasi": "Bata Plester Finishing Cat"
+                                },
+                                {
+                                    "Kategori": "Dinding",
+                                    "Subkategori": "Double Wall",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Finishing Dinding",
+                                    "Subkategori": "Dinding Dalam",
+                                    "Spesifikasi": "Cat Interior"
+                                },
+                                {
+                                    "Kategori": "Finishing Dinding",
+                                    "Subkategori": "Dinding Luar",
+                                    "Spesifikasi": "Cat Exterior (Weather Shield)"
+                                },
+                                {
+                                    "Kategori": "Finishing Lantai",
+                                    "Subkategori": "Kamar Mandi",
+                                    "Spesifikasi": "Homogeneous Tile 60x60"
+                                },
+                                {
+                                    "Kategori": "Finishing Lantai",
+                                    "Subkategori": "Ruang Tamu & Tidur",
+                                    "Spesifikasi": "Homogeneous Tile 60x120"
+                                },
+                                {
+                                    "Kategori": "Kusen",
+                                    "Subkategori": "Aluminium / Kayu",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Pintu",
+                                    "Subkategori": "Engineering Door",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Pintu",
+                                    "Subkategori": "Smart Door Lock",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Jendela",
+                                    "Subkategori": "Kaca Aluminium",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Sanitair",
+                                    "Subkategori": "Kamar Mandi",
+                                    "Spesifikasi": "Ex. TOTO atau setara"
+                                },
+                                {
+                                    "Kategori": "Sanitair",
+                                    "Subkategori": "Meja Dapur",
+                                    "Spesifikasi": "SINK 1 Lubang dengan kran"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Instalasi Charger Mobil Listrik",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Daya Listrik",
+                                    "Spesifikasi": "4400 W"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Instalasi Air",
+                                    "Spesifikasi": "Instalasi Air dengan Kran"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "AC",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Lain-lain",
+                                    "Subkategori": "Solar Water Heater",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Lain-lain",
+                                    "Subkategori": "Ground Tank & Roof Tank",
+                                    "Spesifikasi": ""
+                                }
                             ]
                         }
                     },
@@ -1153,86 +1211,924 @@
                         "ev_charger": "yes",
                         "specification": {
                             "SpesifikasiRumah": [
-                                { "Kategori": "Pondasi", "Subkategori": "Tiang Pancang", "Spesifikasi": "" },
-                                { "Kategori": "Struktur", "Subkategori": "Beton Bertulang", "Spesifikasi": "" },
-                                { "Kategori": "Atap", "Subkategori": "Rangka Atap", "Spesifikasi": "Baja Ringan" },
-                                { "Kategori": "Atap", "Subkategori": "Penutup Atap", "Spesifikasi": "Genteng Bitumen" },
-                                { "Kategori": "Plafon", "Subkategori": "Gypsum Board ", "Spesifikasi": "Finishing Cat" },
-                                { "Kategori": "Dinding", "Subkategori": "Dinding Luar & Dalam", "Spesifikasi": "Bata Plester Finishing Cat" },
-                                { "Kategori": "Dinding", "Subkategori": "Double Wall", "Spesifikasi": "" },
-                                { "Kategori": "Finishing Dinding", "Subkategori": "Dinding Dalam", "Spesifikasi": "Cat Interior" },
-                                { "Kategori": "Finishing Dinding", "Subkategori": "Dinding Luar", "Spesifikasi": "Cat Exterior (Weather Shield)" },
-                                { "Kategori": "Finishing Lantai", "Subkategori": "Kamar Mandi", "Spesifikasi": "Homogeneous Tile 60x60" },
-                                { "Kategori": "Finishing Lantai", "Subkategori": "Ruang Tamu & Tidur", "Spesifikasi": "Homogeneous Tile 60x120" },
-                                { "Kategori": "Kusen", "Subkategori": "Aluminium / Kayu", "Spesifikasi": "" },
-                                { "Kategori": "Pintu", "Subkategori": "Engineering Door", "Spesifikasi": "" },
-                                { "Kategori": "Pintu", "Subkategori": "Smart Door Lock", "Spesifikasi": "" },
-                                { "Kategori": "Jendela", "Subkategori": "Kaca Aluminium", "Spesifikasi": "" },
-                                { "Kategori": "Sanitair", "Subkategori": "Kamar Mandi", "Spesifikasi": "Ex. TOTO atau setara" },
-                                { "Kategori": "Sanitair", "Subkategori": "Meja Dapur", "Spesifikasi": "SINK 1 Lubang dengan kran" },
-                                { "Kategori": "Instalasi", "Subkategori": "Instalasi Charger Mobil Listrik", "Spesifikasi": "" },
-                                { "Kategori": "Instalasi", "Subkategori": "Daya Listrik", "Spesifikasi": "4400 W" },
-                                { "Kategori": "Instalasi", "Subkategori": "Instalasi Air", "Spesifikasi": "Instalasi Air dengan Kran" },
-                                { "Kategori": "Instalasi", "Subkategori": "AC", "Spesifikasi": "" },
-                                { "Kategori": "Lain-lain", "Subkategori": "Solar Water Heater", "Spesifikasi": "" },
-                                { "Kategori": "Lain-lain", "Subkategori": "Ground Tank & Roof Tank", "Spesifikasi": "" }
+                                {
+                                    "Kategori": "Pondasi",
+                                    "Subkategori": "Tiang Pancang",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Struktur",
+                                    "Subkategori": "Beton Bertulang",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Atap",
+                                    "Subkategori": "Rangka Atap",
+                                    "Spesifikasi": "Baja Ringan"
+                                },
+                                {
+                                    "Kategori": "Atap",
+                                    "Subkategori": "Penutup Atap",
+                                    "Spesifikasi": "Genteng Bitumen"
+                                },
+                                {
+                                    "Kategori": "Plafon",
+                                    "Subkategori": "Gypsum Board ",
+                                    "Spesifikasi": "Finishing Cat"
+                                },
+                                {
+                                    "Kategori": "Dinding",
+                                    "Subkategori": "Dinding Luar & Dalam",
+                                    "Spesifikasi": "Bata Plester Finishing Cat"
+                                },
+                                {
+                                    "Kategori": "Dinding",
+                                    "Subkategori": "Double Wall",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Finishing Dinding",
+                                    "Subkategori": "Dinding Dalam",
+                                    "Spesifikasi": "Cat Interior"
+                                },
+                                {
+                                    "Kategori": "Finishing Dinding",
+                                    "Subkategori": "Dinding Luar",
+                                    "Spesifikasi": "Cat Exterior (Weather Shield)"
+                                },
+                                {
+                                    "Kategori": "Finishing Lantai",
+                                    "Subkategori": "Kamar Mandi",
+                                    "Spesifikasi": "Homogeneous Tile 60x60"
+                                },
+                                {
+                                    "Kategori": "Finishing Lantai",
+                                    "Subkategori": "Ruang Tamu & Tidur",
+                                    "Spesifikasi": "Homogeneous Tile 60x120"
+                                },
+                                {
+                                    "Kategori": "Kusen",
+                                    "Subkategori": "Aluminium / Kayu",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Pintu",
+                                    "Subkategori": "Engineering Door",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Pintu",
+                                    "Subkategori": "Smart Door Lock",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Jendela",
+                                    "Subkategori": "Kaca Aluminium",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Sanitair",
+                                    "Subkategori": "Kamar Mandi",
+                                    "Spesifikasi": "Ex. TOTO atau setara"
+                                },
+                                {
+                                    "Kategori": "Sanitair",
+                                    "Subkategori": "Meja Dapur",
+                                    "Spesifikasi": "SINK 1 Lubang dengan kran"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Instalasi Charger Mobil Listrik",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Daya Listrik",
+                                    "Spesifikasi": "4400 W"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Instalasi Air",
+                                    "Spesifikasi": "Instalasi Air dengan Kran"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "AC",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Lain-lain",
+                                    "Subkategori": "Solar Water Heater",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Lain-lain",
+                                    "Subkategori": "Ground Tank & Roof Tank",
+                                    "Spesifikasi": ""
+                                }
                             ]
                         }
                     },
                     {
-                        "name": "Cambridge",
-                        "size": "90m²",
+                        "name": "Amsterdam",
+                        "size": "150m²",
                         "project": "PIC MEDAN",
                         "cluster_type": "eropa",
                         "price_idr": null,
-                        "area": "129m²",
-                        "bedrooms": "3",
-                        "bathrooms": "3",
+                        "area": "206m²",
+                        "bedrooms": "4+1",
+                        "bathrooms": "5+1",
                         "floor": "2",
-                        "carport": "2",
-                        "image": "product/eropa/eropa4.jpg",
+                        "carport": "3",
+                        "image": "product/eropa/eropa2.jpg",
                         "status": "available",
                         "solar_heater": "yes",
                         "ev_charger": "yes",
                         "specification": {
                             "SpesifikasiRumah": [
-                                { "Kategori": "Pondasi", "Subkategori": "Tiang Pancang", "Spesifikasi": "" },
-                                { "Kategori": "Struktur", "Subkategori": "Beton Bertulang", "Spesifikasi": "" },
-                                { "Kategori": "Atap", "Subkategori": "Rangka Atap", "Spesifikasi": "Baja Ringan" },
-                                { "Kategori": "Atap", "Subkategori": "Penutup Atap", "Spesifikasi": "Genteng Bitumen" },
-                                { "Kategori": "Plafon", "Subkategori": "Gypsum Board ", "Spesifikasi": "Finishing Cat" },
-                                { "Kategori": "Dinding", "Subkategori": "Dinding Luar & Dalam", "Spesifikasi": "Bata Plester Finishing Cat" },
-                                { "Kategori": "Dinding", "Subkategori": "Double Wall", "Spesifikasi": "" },
-                                { "Kategori": "Finishing Dinding", "Subkategori": "Dinding Dalam", "Spesifikasi": "Cat Interior" },
-                                { "Kategori": "Finishing Dinding", "Subkategori": "Dinding Luar", "Spesifikasi": "Cat Exterior (Weather Shield)" },
-                                { "Kategori": "Finishing Lantai", "Subkategori": "Kamar Mandi", "Spesifikasi": "Homogeneous Tile 60x60" },
-                                { "Kategori": "Finishing Lantai", "Subkategori": "Ruang Tamu & Tidur", "Spesifikasi": "Homogeneous Tile 60x120" },
-                                { "Kategori": "Kusen", "Subkategori": "Aluminium / Kayu", "Spesifikasi": "" },
-                                { "Kategori": "Pintu", "Subkategori": "Engineering Door", "Spesifikasi": "" },
-                                { "Kategori": "Pintu", "Subkategori": "Smart Door Lock", "Spesifikasi": "" },
-                                { "Kategori": "Jendela", "Subkategori": "Kaca Aluminium", "Spesifikasi": "" },
-                                { "Kategori": "Sanitair", "Subkategori": "Kamar Mandi", "Spesifikasi": "Ex. TOTO atau setara" },
-                                { "Kategori": "Sanitair", "Subkategori": "Meja Dapur", "Spesifikasi": "SINK 1 Lubang dengan kran" },
-                                { "Kategori": "Instalasi", "Subkategori": "Instalasi Charger Mobil Listrik", "Spesifikasi": "" },
-                                { "Kategori": "Instalasi", "Subkategori": "Daya Listrik", "Spesifikasi": "4400 W" },
-                                { "Kategori": "Instalasi", "Subkategori": "Instalasi Air", "Spesifikasi": "Instalasi Air dengan Kran" },
-                                { "Kategori": "Instalasi", "Subkategori": "AC", "Spesifikasi": "" },
-                                { "Kategori": "Lain-lain", "Subkategori": "Solar Water Heater", "Spesifikasi": "" },
-                                { "Kategori": "Lain-lain", "Subkategori": "Ground Tank & Roof Tank", "Spesifikasi": "" }
+                                {
+                                    "Kategori": "Pondasi",
+                                    "Subkategori": "Tiang Pancang",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Struktur",
+                                    "Subkategori": "Beton Bertulang",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Atap",
+                                    "Subkategori": "Rangka Atap",
+                                    "Spesifikasi": "Baja Ringan"
+                                },
+                                {
+                                    "Kategori": "Atap",
+                                    "Subkategori": "Penutup Atap",
+                                    "Spesifikasi": "Genteng Bitumen"
+                                },
+                                {
+                                    "Kategori": "Plafon",
+                                    "Subkategori": "Gypsum Board ",
+                                    "Spesifikasi": "Finishing Cat"
+                                },
+                                {
+                                    "Kategori": "Dinding",
+                                    "Subkategori": "Dinding Luar & Dalam",
+                                    "Spesifikasi": "Bata Plester Finishing Cat"
+                                },
+                                {
+                                    "Kategori": "Dinding",
+                                    "Subkategori": "Double Wall",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Finishing Dinding",
+                                    "Subkategori": "Dinding Dalam",
+                                    "Spesifikasi": "Cat Interior"
+                                },
+                                {
+                                    "Kategori": "Finishing Dinding",
+                                    "Subkategori": "Dinding Luar",
+                                    "Spesifikasi": "Cat Exterior (Weather Shield)"
+                                },
+                                {
+                                    "Kategori": "Finishing Lantai",
+                                    "Subkategori": "Kamar Mandi",
+                                    "Spesifikasi": "Homogeneous Tile 60x60"
+                                },
+                                {
+                                    "Kategori": "Finishing Lantai",
+                                    "Subkategori": "Ruang Tamu & Tidur",
+                                    "Spesifikasi": "Homogeneous Tile 60x120"
+                                },
+                                {
+                                    "Kategori": "Kusen",
+                                    "Subkategori": "Aluminium / Kayu",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Pintu",
+                                    "Subkategori": "Engineering Door",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Pintu",
+                                    "Subkategori": "Smart Door Lock",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Jendela",
+                                    "Subkategori": "Kaca Aluminium",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Sanitair",
+                                    "Subkategori": "Kamar Mandi",
+                                    "Spesifikasi": "Ex. TOTO atau setara"
+                                },
+                                {
+                                    "Kategori": "Sanitair",
+                                    "Subkategori": "Meja Dapur",
+                                    "Spesifikasi": "SINK 1 Lubang dengan kran"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Instalasi Charger Mobil Listrik",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Daya Listrik",
+                                    "Spesifikasi": "4400 W"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Instalasi Air",
+                                    "Spesifikasi": "Instalasi Air dengan Kran"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "AC",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Lain-lain",
+                                    "Subkategori": "Solar Water Heater",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Lain-lain",
+                                    "Subkategori": "Ground Tank & Roof Tank",
+                                    "Spesifikasi": ""
+                                }
                             ]
                         }
-                    }
-                    // Asia
-                    , {
-                        "name": "Rukan Oriental",
-                        "size": "----",
+                    },
+                    {
+                        "name": "Rukan Colosseum",
+                        "size": "75m²",
+                        "project": "PIC MEDAN",
+                        "cluster_type": "eropa",
+                        "price_idr": null,
+                        "area": "262.5m²",
+                        "bedrooms": 0,
+                        "bathrooms": "3",
+                        "floor": "3½",
+                        "carport": null,
+                        "image": "product/eropa/eropa1.jpg",
+                        "status": "available",
+                        "solar_heater": null,
+                        "ev_charger": null,
+                        "specification": {
+                            "SpesifikasiRukan": [
+                                {
+                                    "Kategori": "Pondasi",
+                                    "Subkategori": "Tiang Pancang",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Struktur",
+                                    "Subkategori": "Beton Bertulang",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Atap",
+                                    "Subkategori": "Rangka Atap",
+                                    "Spesifikasi": "Baja Ringan"
+                                },
+                                {
+                                    "Kategori": "Atap",
+                                    "Subkategori": "Penutup Atap",
+                                    "Spesifikasi": "Metal / Carbon Fibre Deck"
+                                },
+                                {
+                                    "Kategori": "Plafon",
+                                    "Subkategori": "Gypsum Board",
+                                    "Spesifikasi": "Finishing Cat"
+                                },
+                                {
+                                    "Kategori": "Dinding",
+                                    "Subkategori": "Dinding Luar & Dalam",
+                                    "Spesifikasi": "Bata Plester Finishing Cat"
+                                },
+                                {
+                                    "Kategori": "Finishing Dinding",
+                                    "Subkategori": "Dinding Dalam",
+                                    "Spesifikasi": "Cat Interior"
+                                },
+                                {
+                                    "Kategori": "Finishing Dinding",
+                                    "Subkategori": "Dinding Luar",
+                                    "Spesifikasi": "Cat Exterior (Weather Shield)"
+                                },
+                                {
+                                    "Kategori": "Finishing Lantai",
+                                    "Subkategori": "Kamar Mandi",
+                                    "Spesifikasi": "Keramik 40x40"
+                                },
+                                {
+                                    "Kategori": "Finishing Lantai",
+                                    "Subkategori": "Ruang Utama",
+                                    "Spesifikasi": "Homogeneous Tile 60x120"
+                                },
+                                {
+                                    "Kategori": "Kusen",
+                                    "Subkategori": "Aluminium / Kayu",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Pintu",
+                                    "Subkategori": "Pintu Aluminium Kaca",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Jendela",
+                                    "Subkategori": "Kaca Aluminium",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Sanitair",
+                                    "Subkategori": "Kamar Mandi",
+                                    "Spesifikasi": "Ex. TOTO atau setara"
+                                },
+                                {
+                                    "Kategori": "Sanitair",
+                                    "Subkategori": "Wastafel",
+                                    "Spesifikasi": "Ex. TOTO atau setara"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Daya Listrik",
+                                    "Spesifikasi": "4400 W"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Instalasi Air",
+                                    "Spesifikasi": "Instalasi air dengan kran"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Gas Negara",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Lain-lain",
+                                    "Subkategori": "Ground Tank & Roof Tank",
+                                    "Spesifikasi": ""
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Fortune (FU 福)",
+                        "size": "144m²",
                         "project": "PIC MEDAN",
                         "cluster_type": "asia",
                         "price_idr": null,
-                        "area": "----",
+                        "area": "169m²",
+                        "bedrooms": "4",
+                        "bathrooms": "4",
+                        "floor": "2",
+                        "carport": "2",
+                        "image": "product/asia/asia2.jpg",
+                        "status": "available",
+                        "solar_heater": "yes",
+                        "ev_charger": "yes",
+                        "specification": {
+                            "SpesifikasiRumah": [
+                                {
+                                    "Kategori": "Pondasi",
+                                    "Subkategori": "Tiang Pancang",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Struktur",
+                                    "Subkategori": "Beton Bertulang",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Atap",
+                                    "Subkategori": "Rangka Atap",
+                                    "Spesifikasi": "Baja Ringan"
+                                },
+                                {
+                                    "Kategori": "Atap",
+                                    "Subkategori": "Penutup Atap",
+                                    "Spesifikasi": "Genteng Bitumen"
+                                },
+                                {
+                                    "Kategori": "Plafon",
+                                    "Subkategori": "Gypsum Board ",
+                                    "Spesifikasi": "Finishing Cat"
+                                },
+                                {
+                                    "Kategori": "Dinding",
+                                    "Subkategori": "Dinding Luar & Dalam",
+                                    "Spesifikasi": "Bata Plester Finishing Cat"
+                                },
+                                {
+                                    "Kategori": "Dinding",
+                                    "Subkategori": "Double Wall",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Finishing Dinding",
+                                    "Subkategori": "Dinding Dalam",
+                                    "Spesifikasi": "Cat Interior"
+                                },
+                                {
+                                    "Kategori": "Finishing Dinding",
+                                    "Subkategori": "Dinding Luar",
+                                    "Spesifikasi": "Cat Exterior (Weather Shield)"
+                                },
+                                {
+                                    "Kategori": "Finishing Lantai",
+                                    "Subkategori": "Kamar Mandi",
+                                    "Spesifikasi": "Homogeneous Tile 60x60"
+                                },
+                                {
+                                    "Kategori": "Finishing Lantai",
+                                    "Subkategori": "Ruang Tamu & Tidur",
+                                    "Spesifikasi": "Homogeneous Tile 60x120"
+                                },
+                                {
+                                    "Kategori": "Kusen",
+                                    "Subkategori": "Aluminium / Kayu",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Pintu",
+                                    "Subkategori": "Engineering Door",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Pintu",
+                                    "Subkategori": "Smart Door Lock",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Jendela",
+                                    "Subkategori": "Kaca Aluminium",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Sanitair",
+                                    "Subkategori": "Kamar Mandi",
+                                    "Spesifikasi": "Ex. TOTO atau setara"
+                                },
+                                {
+                                    "Kategori": "Sanitair",
+                                    "Subkategori": "Meja Dapur",
+                                    "Spesifikasi": "SINK 1 Lubang dengan kran"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Instalasi Charger Mobil Listrik",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Daya Listrik",
+                                    "Spesifikasi": "4400 W"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Instalasi Air",
+                                    "Spesifikasi": "Instalasi Air dengan Kran"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "AC",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Lain-lain",
+                                    "Subkategori": "Solar Water Heater",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Lain-lain",
+                                    "Subkategori": "Ground Tank & Roof Tank",
+                                    "Spesifikasi": ""
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Serenity (Xi 喜)",
+                        "size": "180m²",
+                        "project": "PIC MEDAN",
+                        "cluster_type": "asia",
+                        "price_idr": null,
+                        "area": "206m²",
+                        "bedrooms": "4+1",
+                        "bathrooms": "4+1",
+                        "floor": "2",
+                        "carport": "3",
+                        "image": "product/asia/asia3.jpg",
+                        "status": "available",
+                        "solar_heater": "yes",
+                        "ev_charger": "yes",
+                        "specification": {
+                            "SpesifikasiRumah": [
+                                {
+                                    "Kategori": "Pondasi",
+                                    "Subkategori": "Tiang Pancang",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Struktur",
+                                    "Subkategori": "Beton Bertulang",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Atap",
+                                    "Subkategori": "Rangka Atap",
+                                    "Spesifikasi": "Baja Ringan"
+                                },
+                                {
+                                    "Kategori": "Atap",
+                                    "Subkategori": "Penutup Atap",
+                                    "Spesifikasi": "Genteng Bitumen"
+                                },
+                                {
+                                    "Kategori": "Plafon",
+                                    "Subkategori": "Gypsum Board ",
+                                    "Spesifikasi": "Finishing Cat"
+                                },
+                                {
+                                    "Kategori": "Dinding",
+                                    "Subkategori": "Dinding Luar & Dalam",
+                                    "Spesifikasi": "Bata Plester Finishing Cat"
+                                },
+                                {
+                                    "Kategori": "Dinding",
+                                    "Subkategori": "Double Wall",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Finishing Dinding",
+                                    "Subkategori": "Dinding Dalam",
+                                    "Spesifikasi": "Cat Interior"
+                                },
+                                {
+                                    "Kategori": "Finishing Dinding",
+                                    "Subkategori": "Dinding Luar",
+                                    "Spesifikasi": "Cat Exterior (Weather Shield)"
+                                },
+                                {
+                                    "Kategori": "Finishing Lantai",
+                                    "Subkategori": "Kamar Mandi",
+                                    "Spesifikasi": "Homogeneous Tile 60x60"
+                                },
+                                {
+                                    "Kategori": "Finishing Lantai",
+                                    "Subkategori": "Ruang Tamu & Tidur",
+                                    "Spesifikasi": "Homogeneous Tile 60x120"
+                                },
+                                {
+                                    "Kategori": "Kusen",
+                                    "Subkategori": "Aluminium / Kayu",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Pintu",
+                                    "Subkategori": "Engineering Door",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Pintu",
+                                    "Subkategori": "Smart Door Lock",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Jendela",
+                                    "Subkategori": "Kaca Aluminium",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Sanitair",
+                                    "Subkategori": "Kamar Mandi",
+                                    "Spesifikasi": "Ex. TOTO atau setara"
+                                },
+                                {
+                                    "Kategori": "Sanitair",
+                                    "Subkategori": "Meja Dapur",
+                                    "Spesifikasi": "SINK 1 Lubang dengan kran"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Instalasi Charger Mobil Listrik",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Daya Listrik",
+                                    "Spesifikasi": "4400 W"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Instalasi Air",
+                                    "Spesifikasi": "Instalasi Air dengan Kran"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "AC",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Lain-lain",
+                                    "Subkategori": "Solar Water Heater",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Lain-lain",
+                                    "Subkategori": "Ground Tank & Roof Tank",
+                                    "Spesifikasi": ""
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Eternity (Shou 寿)",
+                        "size": "200m²",
+                        "project": "PIC MEDAN",
+                        "cluster_type": "asia",
+                        "price_idr": null,
+                        "area": "267m²",
+                        "bedrooms": "4+1",
+                        "bathrooms": "4+1",
+                        "floor": "2",
+                        "carport": "3",
+                        "image": "product/asia/asia4.jpg",
+                        "status": "available",
+                        "solar_heater": "yes",
+                        "ev_charger": "yes",
+                        "specification": {
+                            "SpesifikasiRumah": [
+                                {
+                                    "Kategori": "Pondasi",
+                                    "Subkategori": "Tiang Pancang",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Struktur",
+                                    "Subkategori": "Beton Bertulang",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Atap",
+                                    "Subkategori": "Rangka Atap",
+                                    "Spesifikasi": "Baja Ringan"
+                                },
+                                {
+                                    "Kategori": "Atap",
+                                    "Subkategori": "Penutup Atap",
+                                    "Spesifikasi": "Genteng Bitumen"
+                                },
+                                {
+                                    "Kategori": "Plafon",
+                                    "Subkategori": "Gypsum Board ",
+                                    "Spesifikasi": "Finishing Cat"
+                                },
+                                {
+                                    "Kategori": "Dinding",
+                                    "Subkategori": "Dinding Luar & Dalam",
+                                    "Spesifikasi": "Bata Plester Finishing Cat"
+                                },
+                                {
+                                    "Kategori": "Dinding",
+                                    "Subkategori": "Double Wall",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Finishing Dinding",
+                                    "Subkategori": "Dinding Dalam",
+                                    "Spesifikasi": "Cat Interior"
+                                },
+                                {
+                                    "Kategori": "Finishing Dinding",
+                                    "Subkategori": "Dinding Luar",
+                                    "Spesifikasi": "Cat Exterior (Weather Shield)"
+                                },
+                                {
+                                    "Kategori": "Finishing Lantai",
+                                    "Subkategori": "Kamar Mandi",
+                                    "Spesifikasi": "Homogeneous Tile 60x60"
+                                },
+                                {
+                                    "Kategori": "Finishing Lantai",
+                                    "Subkategori": "Ruang Tamu & Tidur",
+                                    "Spesifikasi": "Homogeneous Tile 60x120"
+                                },
+                                {
+                                    "Kategori": "Kusen",
+                                    "Subkategori": "Aluminium / Kayu",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Pintu",
+                                    "Subkategori": "Engineering Door",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Pintu",
+                                    "Subkategori": "Smart Door Lock",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Jendela",
+                                    "Subkategori": "Kaca Aluminium",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Sanitair",
+                                    "Subkategori": "Kamar Mandi",
+                                    "Spesifikasi": "Ex. TOTO atau setara"
+                                },
+                                {
+                                    "Kategori": "Sanitair",
+                                    "Subkategori": "Meja Dapur",
+                                    "Spesifikasi": "SINK 1 Lubang dengan kran"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Instalasi Charger Mobil Listrik",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Daya Listrik",
+                                    "Spesifikasi": "4400 W"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Instalasi Air",
+                                    "Spesifikasi": "Instalasi Air dengan Kran"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "AC",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Lain-lain",
+                                    "Subkategori": "Solar Water Heater",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Lain-lain",
+                                    "Subkategori": "Ground Tank & Roof Tank",
+                                    "Spesifikasi": ""
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Prosperity (Lu 禄)",
+                        "size": "240m²",
+                        "project": "PIC MEDAN",
+                        "cluster_type": "asia",
+                        "price_idr": null,
+                        "area": "323m²",
+                        "bedrooms": "4+1",
+                        "bathrooms": "4+1",
+                        "floor": "2",
+                        "carport": "3",
+                        "image": "product/asia/asia5.jpg",
+                        "status": "available",
+                        "solar_heater": "yes",
+                        "ev_charger": "yes",
+                        "specification": {
+                            "SpesifikasiRumah": [
+                                {
+                                    "Kategori": "Pondasi",
+                                    "Subkategori": "Tiang Pancang",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Struktur",
+                                    "Subkategori": "Beton Bertulang",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Atap",
+                                    "Subkategori": "Rangka Atap",
+                                    "Spesifikasi": "Baja Ringan"
+                                },
+                                {
+                                    "Kategori": "Atap",
+                                    "Subkategori": "Penutup Atap",
+                                    "Spesifikasi": "Genteng Bitumen"
+                                },
+                                {
+                                    "Kategori": "Plafon",
+                                    "Subkategori": "Gypsum Board ",
+                                    "Spesifikasi": "Finishing Cat"
+                                },
+                                {
+                                    "Kategori": "Dinding",
+                                    "Subkategori": "Dinding Luar & Dalam",
+                                    "Spesifikasi": "Bata Plester Finishing Cat"
+                                },
+                                {
+                                    "Kategori": "Dinding",
+                                    "Subkategori": "Double Wall",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Finishing Dinding",
+                                    "Subkategori": "Dinding Dalam",
+                                    "Spesifikasi": "Cat Interior"
+                                },
+                                {
+                                    "Kategori": "Finishing Dinding",
+                                    "Subkategori": "Dinding Luar",
+                                    "Spesifikasi": "Cat Exterior (Weather Shield)"
+                                },
+                                {
+                                    "Kategori": "Finishing Lantai",
+                                    "Subkategori": "Kamar Mandi",
+                                    "Spesifikasi": "Homogeneous Tile 60x60"
+                                },
+                                {
+                                    "Kategori": "Finishing Lantai",
+                                    "Subkategori": "Ruang Tamu & Tidur",
+                                    "Spesifikasi": "Homogeneous Tile 60x120"
+                                },
+                                {
+                                    "Kategori": "Kusen",
+                                    "Subkategori": "Aluminium / Kayu",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Pintu",
+                                    "Subkategori": "Engineering Door",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Pintu",
+                                    "Subkategori": "Smart Door Lock",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Jendela",
+                                    "Subkategori": "Kaca Aluminium",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Sanitair",
+                                    "Subkategori": "Kamar Mandi",
+                                    "Spesifikasi": "Ex. TOTO atau setara"
+                                },
+                                {
+                                    "Kategori": "Sanitair",
+                                    "Subkategori": "Meja Dapur",
+                                    "Spesifikasi": "SINK 1 Lubang dengan kran"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Instalasi Charger Mobil Listrik",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Daya Listrik",
+                                    "Spesifikasi": "4400 W"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Instalasi Air",
+                                    "Spesifikasi": "Instalasi Air dengan Kran"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "AC",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Lain-lain",
+                                    "Subkategori": "Solar Water Heater",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Lain-lain",
+                                    "Subkategori": "Ground Tank & Roof Tank",
+                                    "Spesifikasi": ""
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Rukan Oriental",
+                        "size": "75m²",
+                        "project": "PIC MEDAN",
+                        "cluster_type": "asia",
+                        "price_idr": null,
+                        "area": "262.5m²",
                         "bedrooms": 0,
-                        "bathrooms": "----",
-                        "floor": "----",
+                        "bathrooms": "3",
+                        "floor": "3½",
                         "carport": null,
                         "image": "product/asia/asia1.jpg",
                         "status": "available",
@@ -1240,33 +2136,108 @@
                         "ev_charger": null,
                         "specification": {
                             "SpesifikasiRukan": [
-                                { "Kategori": "Pondasi", "Subkategori": "Tiang Pancang", "Spesifikasi": "" },
-                                // { "Kategori": "Struktur", "Subkategori": "Beton Bertulang", "Spesifikasi": "" },
-                                // { "Kategori": "Atap", "Subkategori": "Rangka Atap", "Spesifikasi": "Baja Ringan" },
-                                // { "Kategori": "Atap", "Subkategori": "Penutup Atap", "Spesifikasi": "Metal / Carbon Fibre Deck" },
-                                // { "Kategori": "Plafon", "Subkategori": "Gypsum Board", "Spesifikasi": "Finishing Cat" },
-                                // { "Kategori": "Dinding", "Subkategori": "Dinding Luar & Dalam", "Spesifikasi": "Bata Plester Finishing Cat" },
-                                // { "Kategori": "Finishing Dinding", "Subkategori": "Dinding Dalam", "Spesifikasi": "Cat Interior" },
-                                // { "Kategori": "Finishing Dinding", "Subkategori": "Dinding Luar", "Spesifikasi": "Cat Exterior (Weather Shield)" },
-                                // { "Kategori": "Finishing Lantai", "Subkategori": "Kamar Mandi", "Spesifikasi": "Keramik 40x40" },
-                                // { "Kategori": "Finishing Lantai", "Subkategori": "Ruang Utama", "Spesifikasi": "Homogeneous Tile 60x120" },
-                                // { "Kategori": "Kusen", "Subkategori": "Aluminium / Kayu", "Spesifikasi": "" },
-                                // { "Kategori": "Pintu", "Subkategori": "Pintu Aluminium Kaca", "Spesifikasi": "" },
-                                // { "Kategori": "Jendela", "Subkategori": "Kaca Aluminium", "Spesifikasi": "" },
-                                // { "Kategori": "Sanitair", "Subkategori": "Kamar Mandi", "Spesifikasi": "Ex. TOTO atau setara" },
-                                // { "Kategori": "Sanitair", "Subkategori": "Wastafel", "Spesifikasi": "Ex. TOTO atau setara" },
-                                // { "Kategori": "Instalasi", "Subkategori": "Daya Listrik", "Spesifikasi": "4400 W" },
-                                // { "Kategori": "Instalasi", "Subkategori": "Instalasi Air", "Spesifikasi": "Instalasi air dengan kran" },
-                                // { "Kategori": "Instalasi", "Subkategori": "Gas Negara", "Spesifikasi": "" },
-                                // { "Kategori": "Lain-lain", "Subkategori": "Ground Tank & Roof Tank", "Spesifikasi": "" }
+                                {
+                                    "Kategori": "Pondasi",
+                                    "Subkategori": "Tiang Pancang",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Struktur",
+                                    "Subkategori": "Beton Bertulang",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Atap",
+                                    "Subkategori": "Rangka Atap",
+                                    "Spesifikasi": "Baja Ringan"
+                                },
+                                {
+                                    "Kategori": "Atap",
+                                    "Subkategori": "Penutup Atap",
+                                    "Spesifikasi": "Metal / Carbon Fibre Deck"
+                                },
+                                {
+                                    "Kategori": "Plafon",
+                                    "Subkategori": "Gypsum Board",
+                                    "Spesifikasi": "Finishing Cat"
+                                },
+                                {
+                                    "Kategori": "Dinding",
+                                    "Subkategori": "Dinding Luar & Dalam",
+                                    "Spesifikasi": "Bata Plester Finishing Cat"
+                                },
+                                {
+                                    "Kategori": "Finishing Dinding",
+                                    "Subkategori": "Dinding Dalam",
+                                    "Spesifikasi": "Cat Interior"
+                                },
+                                {
+                                    "Kategori": "Finishing Dinding",
+                                    "Subkategori": "Dinding Luar",
+                                    "Spesifikasi": "Cat Exterior (Weather Shield)"
+                                },
+                                {
+                                    "Kategori": "Finishing Lantai",
+                                    "Subkategori": "Kamar Mandi",
+                                    "Spesifikasi": "Keramik 40x40"
+                                },
+                                {
+                                    "Kategori": "Finishing Lantai",
+                                    "Subkategori": "Ruang Utama",
+                                    "Spesifikasi": "Homogeneous Tile 60x120"
+                                },
+                                {
+                                    "Kategori": "Kusen",
+                                    "Subkategori": "Aluminium / Kayu",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Pintu",
+                                    "Subkategori": "Pintu Aluminium Kaca",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Jendela",
+                                    "Subkategori": "Kaca Aluminium",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Sanitair",
+                                    "Subkategori": "Kamar Mandi",
+                                    "Spesifikasi": "Ex. TOTO atau setara"
+                                },
+                                {
+                                    "Kategori": "Sanitair",
+                                    "Subkategori": "Wastafel",
+                                    "Spesifikasi": "Ex. TOTO atau setara"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Daya Listrik",
+                                    "Spesifikasi": "4400 W"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Instalasi Air",
+                                    "Spesifikasi": "Instalasi air dengan kran"
+                                },
+                                {
+                                    "Kategori": "Instalasi",
+                                    "Subkategori": "Gas Negara",
+                                    "Spesifikasi": ""
+                                },
+                                {
+                                    "Kategori": "Lain-lain",
+                                    "Subkategori": "Ground Tank & Roof Tank",
+                                    "Spesifikasi": ""
+                                }
                             ]
                         }
-                    },
-
+                    }
                 ]
             };
 
-            const carouselData = { "slides": [{ "image": "carousel/c1.jpg", "title": "Gerbang Kawasan", "subtitle": "One Gate System & keamanan 24 jam.", "btn_text": "Jelajahi Fasilitas", "btn_link": "#facilities" }, { "image": "carousel/c1.jpg", "title": "Gerbang Kawasan", "subtitle": "One Gate System & keamanan 24 jam.", "btn_text": "Jelajahi Fasilitas", "btn_link": "#facilities" }, { "image": "carousel/c2.jpg", "title": "Landmark", "subtitle": "Lebih dari sekadar penanda lokasi, landmark ini menjadi simbol inovasi, harmoni, dan estetika yang menggambarkan visi Pesona Indah Cemara sebagai kawasan hunian dan bisnis yang penuh gaya, berkelas, dan berjiwa kota.", "btn_text": "Jelajahi Fasilitas", "btn_link": "#facilities" }, { "image": "carousel/c3.jpg", "title": "Landmark", "subtitle": "Lebih dari sekadar penanda lokasi, landmark ini menjadi simbol inovasi, harmoni, dan estetika yang menggambarkan visi Pesona Indah Cemara sebagai kawasan hunian dan bisnis yang penuh gaya, berkelas, dan berjiwa kota.", "btn_text": "Jelajahi Fasilitas", "btn_link": "#facilities" }, { "image": "carousel/c4.jpg", "title": "Retail Hub", "subtitle": "Retail Hub ini menghadirkan supermarket dan area komersial bergaya modern klasik yang elegan. Tempat ini menjadi destinasi ideal untuk memenuhi kebutuhan harian, menikmati kuliner, dan berkumpul bersama keluarga. Sebuah pusat aktivitas yang praktis, modern, dan penuh kenyamanan.", "btn_text": "Temukan Tipe Unit", "btn_link": "#products" }, { "image": "carousel/c5.jpg", "title": "Retail Hub", "subtitle": "Retail Hub ini menghadirkan supermarket dan area komersial bergaya modern klasik yang elegan. Tempat ini menjadi destinasi ideal untuk memenuhi kebutuhan harian, menikmati kuliner, dan berkumpul bersama keluarga. Sebuah pusat aktivitas yang praktis, modern, dan penuh kenyamanan.", "btn_text": "Temukan Tipe Unit", "btn_link": "#products" }, { "image": "carousel/c6.jpg", "title": "Clubhouse", "subtitle": "Clubhouse ini menghadirkan suasana dinamis dengan ruang multifungsi fleksibel yang ideal untuk berbagai acara dan pertemuan, serta area lounge indoor dan outdoor yang nyaman untuk bersantai maupun bersosialisasi.", "btn_text": "Jelajahi Fasilitas", "btn_link": "#facilities" }, { "image": "carousel/c7.jpg", "title": "Clubhouse", "subtitle": "Clubhouse ini menghadirkan suasana dinamis dengan ruang multifungsi fleksibel yang ideal untuk berbagai acara dan pertemuan, serta area lounge indoor dan outdoor yang nyaman untuk bersantai maupun bersosialisasi.", "btn_text": "Jelajahi Fasilitas", "btn_link": "#facilities" }, { "image": "carousel/c8.jpg", "title": "Cafe", "subtitle": "Pesona Indah Cemara", "btn_text": "Jelajahi Fasilitas", "btn_link": "#facilities" }] };
+            const carouselData = { "slides": [{ "image": "carousel/c1.jpg", "title": "Gerbang Kawasan", "subtitle": "One Gate System & keamanan 24 jam.", "btn_text": "Jelajahi Fasilitas", "btn_link": "#facilities" }, { "image": "carousel/c1.jpg", "title": "Gerbang Kawasan", "subtitle": "One Gate System & keamanan 24 jam.", "btn_text": "Jelajahi Fasilitas", "btn_link": "#facilities" }, { "image": "carousel/c2.jpg", "title": "Landmark", "subtitle": "Lebih dari sekadar penanda lokasi, landmark ini menjadi simbol inovasi, harmoni, dan estetika yang menggambarkan visi Pesona Indah Cemara sebagai kawasan hunian dan bisnis yang penuh gaya, berkelas, dan berjiwa kota.", "btn_text": "Jelajahi Fasilitas", "btn_link": "#facilities" }, { "image": "carousel/c3.jpg", "title": "Retail Hub", "subtitle": "Retail Hub ini menghadirkan supermarket dan area komersial bergaya modern klasik yang elegan. Tempat ini menjadi destinasi ideal untuk memenuhi kebutuhan harian, menikmati kuliner, dan berkumpul bersama keluarga. Sebuah pusat aktivitas yang praktis, modern, dan penuh kenyamanan.", "btn_text": "Jelajahi Fasilitas", "btn_link": "#facilities" }, { "image": "carousel/c4.jpg", "title": "Retail Hub", "subtitle": "", "btn_text": "Jelajahi Fasilitas", "btn_link": "#facilities" }, { "image": "carousel/c5.jpg", "title": "Retail Hub", "subtitle": "", "btn_text": "Jelajahi Fasilitas", "btn_link": "#facilities" }, { "image": "carousel/c7.jpg", "title": "Clubhouse", "subtitle": "Clubhouse ini menghadirkan suasana dinamis dengan ruang multifungsi fleksibel yang ideal untuk berbagai acara dan pertemuan, serta area lounge indoor dan outdoor yang nyaman untuk bersantai maupun bersosialisasi.", "btn_text": "Jelajahi Fasilitas", "btn_link": "#facilities" }, { "image": "carousel/c6.jpg", "title": "Clubhouse", "subtitle": "", "btn_text": "Jelajahi Fasilitas", "btn_link": "#facilities" }, { "image": "carousel/c8.jpg", "title": "Cafe", "subtitle": "Menghadirkan suasana elegan dengan atap kaca bercahaya alami, ornamen besi artistik, dan lampu vintage yang hangat. Area duduk yang lapang dan nyaman menjadikannya tempat ideal untuk bersantai, berkumpul, atau bekerja. Dengan sentuhan greenery dan desain estetik, cafe ini menawarkan pengalaman bersantap yang tenang, modern, dan memukau.", "btn_text": "Jelajahi Fasilitas", "btn_link": "#facilities" }] }
             const aboutData = { "image_path": "about/a1.jpg", "title": "About Us", "description": "<strong>Pesona Indah Cemara</strong> — persembahan istimewa dari <strong>Agung Sedayu Group</strong>, dikembangkan di atas lahan premium seluas <strong>44 hektar</strong>, siap menjadi proyek paling <strong>TOP</strong> di Kota Medan sekaligus hunian eksklusif modern yang menghadirkan harmoni antara kenyamanan hidup dan peluang investasi yang menjanjikan.</br></br>Dirancang dengan konsep <strong>“Aman dan Nyaman”</strong>, Pesona Indah Cemara menghadirkan kawasan hunian yang elegan, pusat komersial dan one gate system, clubhouse premium, supermarket, sekolah & klinik Tzu Chi, fasilitas olahraga modern, taman tematik, serta ruang terbuka hijau yang luas dan akses mudah ke pusat kota.</br></br>Berlokasi strategis di kawasan </strong>Cemara Asri</strong>, hanya beberapa menit dari <strong>Exit Tol H.Anif</strong>, kawasan ini menawarkan <strong>gaya hidup baru yang lebih baik (a new level of living)</strong> serta <strong>potensi investasi bernilai tinggi</strong> dalam waktu singkat.</br></br>Dengan integrasi sempurna antara <strong>hunian hijau yang nyaman</strong> dan <strong>kawasan bisnis yang strategis</strong>, Pesona Indah Cemara siap menjadi <strong>hunian masa depan, ternyaman, dan terlengkap di Medan</strong>. </br></br>Selamat datang di <strong>Pesona Indah Cemara</strong>, di mana <strong>kemewahan, kenyamanan, dan keunggulan</strong> berpadu dalam harmoni sempurna." };
 
             const facilitiesData = {
@@ -1304,8 +2275,8 @@
                                 "image": "facilities/lapangan_padel.png"
                             },
                             {
-                                "nama": "Jalur Jogging",
-                                "image": "facilities/jalur_jogging.png"
+                                "nama": "Jalur Joging",
+                                "image": "facilities/jalur_joging.png"
                             },
                             {
                                 "nama": "Gazebo",
@@ -1322,12 +2293,17 @@
 
             const productDetails = [
                 // Eropa
-                { gallery: ["product/eropa/eropa1.jpg", "product/eropa/eropa1_alt.jpg", "product/eropa/gerbang_eropa.jpg"], description: "Rukan Colosseum adalah unit komersial 3.5 lantai yang sempurna untuk bisnis Anda di lokasi premium." },
-                { gallery: ["product/eropa/eropa2.jpg", "product/eropa/eropa2_alt.jpg", "product/eropa/gerbang_eropa.jpg", "facilities/fas_cluster_alt.jpg", "facilities/fas_cluster_alt2.jpg"], description: "Rumah mewah Amsterdam dengan desain Eropa, 4+1 kamar tidur, dan fasilitas modern." },
-                { gallery: ["product/eropa/eropa3.jpg", "product/eropa/eropa3_alt.jpg", "product/eropa/gerbang_eropa.jpg", "facilities/fas_cluster_alt.jpg", "facilities/fas_cluster_alt2.jpg"], description: "Barcelona, hunian compact 8x15m yang fungsional, ideal untuk keluarga (saat ini terjual)." },
                 { gallery: ["product/eropa/eropa4.jpg", "product/eropa/eropa4_alt.jpg", "product/eropa/gerbang_eropa.jpg", "facilities/fas_cluster_alt.jpg", "facilities/fas_cluster_alt2.jpg"], description: "Cambridge 6x15m, rumah 3 kamar tidur dengan pencahayaan alami dan sirkulasi udara optimal." },
+                { gallery: ["product/eropa/eropa3.jpg", "product/eropa/eropa3_alt.jpg", "product/eropa/gerbang_eropa.jpg", "facilities/fas_cluster_alt.jpg", "facilities/fas_cluster_alt2.jpg"], description: "Barcelona, hunian compact 8x15m yang fungsional, ideal untuk keluarga (saat ini terjual)." },
+                { gallery: ["product/eropa/eropa2.jpg", "product/eropa/eropa2_alt.jpg", "product/eropa/gerbang_eropa.jpg", "facilities/fas_cluster_alt.jpg", "facilities/fas_cluster_alt2.jpg"], description: "Rumah mewah Amsterdam dengan desain Eropa, 4+1 kamar tidur, dan fasilitas modern." },
+                { gallery: ["product/eropa/eropa1.jpg", "product/eropa/eropa1_alt.jpg", "product/eropa/gerbang_eropa.jpg"], description: "Rukan Colosseum adalah unit komersial 3.5 lantai yang sempurna untuk bisnis Anda di lokasi premium." },
+
                 // Asia
-                { gallery: ["product/asia/asia1.jpg", "product/asia/asia1_alt.jpg", "product/asia/gerbang_asia.jpg", "facilities/fas_cluster_alt.jpg", "facilities/fas_cluster_alt2.jpg"], description: "---" }
+                { gallery: ["product/asia/asia2.jpg", "product/asia/asia2_alt.jpg", "product/asia/gerbang_asia.jpg", "facilities/fas_cluster_alt.jpg", "facilities/fas_cluster_alt2.jpg"], description: "Fu 福 (Fortune) – Keberuntungan dan Awal Baru yang Penuh Harapan Hunian praktis dengan tata ruang efisien, ideal bagi keluarga muda yang ingin memulai kisah baru. Menghadirkan kenyamanan fungsional dan desain modern yang membawa energi positif." },
+                { gallery: ["product/asia/asia3.jpg", "product/asia/asia3_alt.jpg", "product/asia/gerbang_asia.jpg", "facilities/fas_cluster_alt.jpg", "facilities/fas_cluster_alt2.jpg"], description: "---" },
+                { gallery: ["product/asia/asia4.jpg", "product/asia/asia4_alt.jpg", "product/asia/gerbang_asia.jpg", "facilities/fas_cluster_alt.jpg", "facilities/fas_cluster_alt2.jpg"], description: "---" },
+                { gallery: ["product/asia/asia5.jpg", "product/asia/asia5_alt.jpg", "product/asia/gerbang_asia.jpg", "facilities/fas_cluster_alt.jpg", "facilities/fas_cluster_alt2.jpg"], description: "---" },
+                { gallery: ["product/asia/asia1.jpg", "product/asia/asia1_alt.jpg", "product/asia/asia1_alt1.jpg", "product/asia/asia1_alt2.jpg", "product/asia/gerbang_asia.jpg"], description: "---" }
             ];
             // --- END DATA INJECTION ---
 
@@ -1400,11 +2376,12 @@
                 }
                 // === SLIDE LAINNYA (GAMBAR) ===
                 else {
+                    const hasSubtitle = slide.subtitle && slide.subtitle.trim() !== '';
                     const slideHTML = `
                     <div class="swiper-slide" style="background-image:url(${slide.image})" data-swiper-autoplay="5000">
                         <div class="slide-content">
-                            <h1 class="hero-title">${slide.title}</h1>
-                            <p>${slide.subtitle}</p>
+                            <h1 class="hero-title ${!hasSubtitle ? 'topTitle' : ''}">${slide.title}</h1>
+                            ${hasSubtitle ? `<p>${slide.subtitle}</p>` : ''}
                             <a href="${slide.btn_link}" class="btn btn-primary mt-3">${slide.btn_text}</a>
                         </div>
                     </div>
@@ -1630,20 +2607,20 @@
                 on: {
                     init: function (swiper) {
                         setTimeout(() => animateHeroText(swiper.slides[swiper.activeIndex]), 100);
-                        
+
                         // Get video element and setup event listeners
                         setTimeout(() => {
                             localVideoPlayer = document.getElementById('hero-video-player');
                             if (localVideoPlayer) {
                                 // Event when video ends
-                                localVideoPlayer.addEventListener('ended', function() {
+                                localVideoPlayer.addEventListener('ended', function () {
                                     if (heroSwiper) {
                                         heroSwiper.slideNext();
                                     }
                                 });
-                                
+
                                 // Try to play video on mobile devices
-                                localVideoPlayer.addEventListener('loadedmetadata', function() {
+                                localVideoPlayer.addEventListener('loadedmetadata', function () {
                                     const playPromise = localVideoPlayer.play();
                                     if (playPromise !== undefined) {
                                         playPromise.catch(error => {
@@ -1651,7 +2628,7 @@
                                         });
                                     }
                                 });
-                                
+
                                 // For mobile devices - attempt to play when slide becomes active
                                 const observer = new IntersectionObserver((entries) => {
                                     entries.forEach(entry => {
@@ -1665,11 +2642,11 @@
                                         }
                                     });
                                 }, { threshold: 0.5 });
-                                
+
                                 observer.observe(localVideoPlayer);
                             }
                         }, 500);
-                        
+
                         // Cek slide aktif saat init
                         const activeSlide = swiper.slides[swiper.activeIndex];
                         if (activeSlide.classList.contains('slide-with-video')) {
