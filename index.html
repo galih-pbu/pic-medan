@@ -1,0 +1,2040 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PIC Medan | Hunian Modern dan Investasi Terbaik di Medan">
+    <meta name="keywords"
+        content="picmedan, pic medan, pik medan, pik di medan, pik medan agungsedayu, pik medan asg, property, rumah, rukan, europa, agungsedayu, properti, pesonaindahcemara, pesonaindahcemaramedan, konseptematikbenua, huniannuansaeropa">
+    <meta name="author" content="PICMedan">
+    <meta property="og:title" content="PIC Medan | Hunian Modern dan Investasi Terbaik di Medan">
+    <meta property="og:description"
+        content="Kawasan hunian elegan berkonsep Aman dan Nyaman dengan menawarkan gaya hidup yang lebih baik dilengkapi berbagai fasilitas, pusat komersil, serta ruang terbuka hijau yang luas dan akses mudah ke pusat kota.">
+    <meta property="og:image" content="https.picmedan.com/logo.svg">
+    <meta property="og:url" content="https.picmedan.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="PIC Medan">
+    <title>PIC MEDAN - Beranda</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        :root {
+            --bs-primary: #0E2744;
+            --bs-secondary: #337FD7;
+            --color-accent1: #F8D68C;
+            --color-accent2: #FF954B;
+            --color-accent3: #CB3922;
+
+            --font-primary: 'Playfair Display', serif;
+            --font-secondary: 'Inter', sans-serif;
+            --swiper-theme-color: var(--color-accent1);
+        }
+
+        body {
+            font-family: var(--font-secondary);
+            background-color: var(--bs-body-bg);
+            overflow-x: hidden;
+            /* Mencegah horizontal scroll karena animasi */
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--font-primary);
+            font-weight: 700;
+        }
+
+        .section-title {
+            color: var(--bs-primary);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background-color: var(--color-accent1);
+            transition: width 1s ease-out;
+        }
+
+        .animate-on-scroll.is-visible .section-title::after {
+            width: 100%;
+        }
+
+        [data-bs-theme="dark"] .section-title {
+            color: var(--color-accent1);
+        }
+
+        [data-bs-theme="dark"] .section-title::after {
+            background-color: var(--bs-secondary);
+        }
+
+
+        /* Hero Section with Swiper Carousel */
+        #hero {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-color: #0E2744;
+        }
+
+        .swiper-hero {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-hero .swiper-wrapper {
+            align-items: center;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            color: #fff;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            text-align: center;
+            width: 60%;
+            height: 80%;
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: opacity 0.3s ease;
+        }
+
+        .swiper-slide:hover {
+            opacity: 0.9;
+            /* Sedikit efek hover */
+        }
+
+        #imagePreviewModal .modal-dialog {
+            max-width: 95%;
+            /* Agar gambar benar-benar lebar di layar mobile */
+        }
+
+        /* Background gelap di belakang gambar */
+        #imagePreviewModal {
+            background-color: rgba(0, 0, 0, 0.85) !important;
+        }
+
+        .swiper-hero .swiper-slide {
+            transition: transform 0.6s ease, opacity 0.6s ease, filter 0.6s ease;
+            transform: scale(0.8);
+            opacity: 0.5;
+            filter: blur(2px);
+            pointer-events: none;
+        }
+
+        .swiper-hero .swiper-slide-active {
+            transform: scale(1);
+            opacity: 1;
+            filter: blur(0);
+            pointer-events: auto;
+        }
+
+
+        .swiper-slide::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgb(14 39 68 / 30%) 0%, rgba(14, 39, 68, 0.2) 50%, rgb(14 39 68 / 30%) 100%);
+            z-index: 1;
+            transition: background 0.4s ease-in-out;
+        }
+
+        [data-bs-theme="dark"] .swiper-slide::after {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.9) 100%);
+        }
+
+        .slide-content {
+            z-index: 2;
+            margin-bottom: 5rem;
+            padding: 0 1rem;
+            max-width: 80vw;
+            ;
+        }
+
+        .slide-content h1 {
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .letter {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px) scale(0.8);
+        }
+
+        .white {
+            color: #fff;
+        }
+
+        .slide-content p {
+            font-size: 1.1rem;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease .5s, transform 0.8s ease .5s;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            /* Letakkan di belakang overlay dan konten */
+        }
+
+        .slide-with-video::after {
+            pointer-events: none;
+            /* Biarkan klik menembus overlay ke iframe di bawahnya */
+        }
+
+        .swiper-slide-active .slide-content p {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-content .btn {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease .7s, transform 0.8s ease .7s;
+        }
+
+        .swiper-slide-active .slide-content .btn {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: var(--swiper-theme-color);
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: var(--swiper-theme-color);
+        }
+
+        .swiper-pagination-bullet {
+            background-color: #ffffff;
+        }
+
+        .navbar {
+            transition: background-color 0.4s ease-in-out, padding 0.4s ease-in-out;
+        }
+
+        .navbar:not(.scrolled) .nav-link,
+        .navbar:not(.scrolled) .navbar-brand,
+        .navbar:not(.scrolled) .bi {
+            color: #ffffff !important;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+        }
+
+        .logo:not(.scrolled) {
+            color: #ffffff !important;
+        }
+
+        .navbar:not(.scrolled) .navbar-toggler-icon {
+            filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.6));
+        }
+
+        .navbar.scrolled {
+            background-color: var(--bs-body-bg) !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        [data-bs-theme="dark"] .navbar.scrolled {
+            background-color: #0E2744 !important;
+        }
+
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--bs-border-color);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-outline-primary {
+            --bs-btn-color: var(--bs-secondary);
+            --bs-btn-border-color: var(--bs-secondary);
+            --bs-btn-hover-bg: var(--bs-secondary);
+            --bs-btn-hover-border-color: var(--bs-secondary);
+        }
+
+        .btn-primary {
+            --bs-btn-bg: var(--bs-secondary);
+            --bs-btn-border-color: var(--bs-secondary);
+            --bs-btn-hover-bg: #2a6ab5;
+            /* A slightly darker blue for hover */
+            --bs-btn-hover-border-color: #2a6ab5;
+        }
+
+        #whatsapp-form-bar {
+            background-color: #f8f9fa;
+        }
+
+        [data-bs-theme="dark"] #whatsapp-form-bar {
+            background-color: var(--bs-primary);
+            border-top: 1px solid var(--bs-border-color);
+            border-bottom: 1px solid var(--bs-border-color);
+        }
+
+        #whatsapp-form-bar .form-control {
+            border: 1px solid var(--bs-primary);
+        }
+
+        [data-bs-theme="dark"] #whatsapp-form-bar .form-control {
+            background-color: var(--bs-gray-dark);
+            border: 1px solid var(--bs-border-color);
+        }
+
+        #whatsapp-form-bar .btn {
+            background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
+            color: #fff;
+        }
+
+        [data-bs-theme="dark"] #whatsapp-form-bar .btn {
+            background-color: var(--bs-secondary);
+            border-color: var(--bs-secondary);
+            color: #fff;
+        }
+
+        [data-bs-theme="light"] .btn-outline-primary {
+            --bs-btn-color: white;
+            --bs-btn-border-color: white;
+            --bs-btn-hover-bg: #2a6ab5;
+            --bs-btn-hover-border-color: white;
+        }
+
+        /* Menggunakan Flexbox */
+        ul.specs-list {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul.specs-list li {
+            flex-basis: 50%;
+            /* Membuat setiap item mengambil 50% lebar */
+            box-sizing: border-box;
+            /* Opsional, untuk padding/border */
+        }
+
+        /* Atau menggunakan Grid */
+        ul.specs-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* Dua kolom sama lebar */
+            list-style: none;
+            padding-left: 0;
+            gap: 10px;
+            /* Jarak antar item */
+        }
+
+        .about-image-wrapper {
+            overflow: hidden;
+            border-radius: .5rem;
+            box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.075)
+        }
+
+        .about-image {
+            object-fit: cover;
+            height: 100%;
+            min-height: 450px;
+            width: 100%;
+            transition: transform 0.5s ease-out;
+        }
+
+        .achievement-item .counter {
+            font-size: 3rem;
+            font-family: var(--font-primary);
+            color: var(--bs-secondary);
+        }
+
+        [data-bs-theme="dark"] .achievement-item .counter {
+            color: var(--color-accent1);
+        }
+
+        .facility-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--bs-border-color);
+            overflow: hidden;
+            /* Pastikan gambar tidak keluar dari border radius */
+        }
+
+        li.col-6.luasbangunantanah {
+            font-size: small;
+            margin-bottom: 12px;
+            float: left;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .facility-card img {
+            height: 20vh;
+            /* Atur tinggi gambar agar seragam */
+            object-fit: cover;
+        }
+
+        .nearby-facility-list li {
+            margin-bottom: 0.75rem;
+            /* Jarak antar item daftar */
+        }
+
+        .nearby-facility-list i {
+            color: rgba(13, 110, 253, 1);
+            /* Warna ikon pin */
+            width: 1.5em;
+            /* Beri ruang agar teks rata */
+        }
+
+        [data-bs-theme="dark"] .nearby-facility-list i {
+            color: var(--color-accent1);
+        }
+
+
+        .fab-whatsapp {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: #FFF;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1050;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .fab-whatsapp:hover {
+            transform: scale(1.1);
+            color: #FFF;
+            background-color: #128C7E;
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* .modal-lg {
+            max-width: 67vw;
+        } */
+
+        .swiper-modal .swiper-slide {
+            height: 450px;
+            width: 100%;
+            border-radius: 0;
+            background-color: #000;
+        }
+
+        .swiper-modal .swiper-button-next,
+        .swiper-modal .swiper-button-prev {
+            color: var(--swiper-theme-color);
+        }
+
+        .swiper-modal .swiper-pagination-bullet-active {
+            background-color: var(--swiper-theme-color);
+        }
+
+        #modalSpecs th[rowspan] {
+            vertical-align: top;
+            padding-top: 0.8rem;
+        }
+
+        #modalSpecs th:not([rowspan]),
+        #modalSpecs td {
+            vertical-align: middle;
+        }
+
+        .py-5 {
+            padding-bottom: 1rem !important;
+        }
+
+        .hero-video {
+            object-fit: contain;
+        }
+
+        .pic_bold {
+            font-weight: bold;
+        }
+
+        .lead strong {
+            font-weight: 600;
+        }
+
+        button.btn.btn-outline-primary.w-100-extend {
+            width: 100%;
+        }
+
+        hr.my-2 {
+            width: 100%;
+        }
+
+        /* Ini untuk menyembunyikan panah default (pseudo-element ::after) */
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+            content: none;
+        }
+
+        /* (Opsional) Atur ukuran dan warna ikon baru Anda */
+        .swiper-button-prev i,
+        .swiper-button-next i {
+            font-size: 2rem;
+            /* Atur ukuran ikon (misal 32px) */
+            color: white;
+            /* Ganti warna (jika di atas background gelap) */
+            opacity: 0.8;
+        }
+
+        /* (Opsional) Buat lebih jelas saat di-hover */
+        .swiper-button-prev:hover i,
+        .swiper-button-next:hover i {
+            opacity: 1;
+        }
+
+        .table-dark thead th {
+            background-color: #000000;
+            /* Hitam pekat */
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            color: #FFFFFF;
+            vertical-align: middle;
+            height: 50px;
+        }
+
+        /* Memberi jarak pada item menu navigasi */
+        .navbar-nav .nav-item {
+            margin-left: 0.5rem;
+            /* Jarak kiri */
+            margin-right: 0.5rem;
+            /* Jarak kanan */
+        }
+
+        img.me-2.logo {
+            margin-right: 1.5rem !important;
+        }
+
+
+        /* --- STYLING BARU UNTUK TAB PRODUK --- */
+        #product-filter-tabs .nav-link {
+            border-radius: 50rem;
+            /* Bentuk pil penuh */
+            padding: 0.5rem 1.5rem;
+            margin: 0 0.5rem;
+            font-weight: 500;
+            border: 2px solid var(--bs-border-color);
+            transition: all 0.3s ease;
+            background-color: var(--bs-tertiary-bg);
+            /* Abu-abu terang (light mode) / Abu-abu gelap (dark mode) */
+            color: var(--bs-emphasis-color);
+            /* Teks gelap (light mode) / Teks terang (dark mode) */
+        }
+
+        /* Status Aktif */
+        #product-filter-tabs .nav-link.active {
+            background-color: var(--bs-secondary);
+            /* Warna biru sekunder */
+            color: #ffffff;
+            border-color: var(--bs-secondary);
+            box-shadow: 0 4px 10px rgba(51, 127, 215, 0.3);
+        }
+
+        /* Status Hover (untuk tab yang tidak aktif) */
+        #product-filter-tabs .nav-link:not(.active):hover {
+            background-color: var(--bs-primary);
+            color: #ffffff;
+            border-color: var(--bs-primary);
+        }
+
+        /* Status Hover di Dark Mode (untuk tab yang tidak aktif) */
+        [data-bs-theme="dark"] #product-filter-tabs .nav-link:not(.active):hover {
+            background-color: var(--color-accent1);
+            /* Aksen kuning */
+            color: var(--bs-primary);
+            /* Teks gelap di atas kuning */
+            border-color: var(--color-accent1);
+        }
+
+        #modalProductImage {
+            cursor: zoom-in;
+            transition: transform 0.3s ease;
+        }
+
+        #modalProductImage:hover {
+            transform: scale(1.02);
+            opacity: 0.9;
+        }
+
+        /* --- AKHIR STYLING BARU --- */
+
+
+        @media (max-width: 768px) {
+            .slide-content h1 {
+                font-size: 1.5rem;
+            }
+
+            .swiper-hero,
+            #hero {
+                height: 60vh;
+            }
+
+            .slide-content p {
+                font-size: 0.8rem;
+            }
+
+            .swiper-slide {
+                width: 90vw;
+            }
+
+            .py-5 {
+                padding-top: 1rem !important;
+            }
+
+            .bg-transparent {
+                background-color: #1b1b1b !important;
+            }
+
+            .lead {
+                text-align: justify;
+            }
+
+            .hero-video {
+                object-fit: contain;
+            }
+
+
+            li.col-6.luasbangunantanah {
+                width: 100%;
+                font-size: unset;
+                margin-bottom: 0px;
+                float: none;
+            }
+
+            .swiper-slide.slide-with-video.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-active {
+                top: 20px;
+            }
+
+            .swiper-slide.swiper-slide-visible.swiper-slide-fully-visible.swiper-slide-active {
+                top: 20px;
+            }
+
+            .swiper-modal .swiper-slide {
+                height: 23vh;
+            }
+
+            .about-image {
+                min-height: 0;
+            }
+
+            .g-5,
+            .gx-5 {
+                --bs-gutter-x: 0rem;
+            }
+
+            .ratio.ratio-4x3.rounded-3.overflow-hidden.shadow-lg {
+                height: 660px;
+            }
+
+            /* Buat tab lebih kecil di mobile */
+            #product-filter-tabs .nav-link {
+                padding: 0.4rem 1rem;
+                margin: 0 0.25rem;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Styling untuk Toggle Tema di Light Mode */
+        [data-bs-theme="light"] .form-check-input:not(:checked) {
+            background-color: #dee2e6;
+            /* Warna abu-abu terang */
+            border-color: #adb5bd;
+            /* Border abu-abu */
+        }
+
+        /* Opsional: Sedikit lebih renggang di layar besar */
+        @media (min-width: 992px) {
+
+            .modal-lg,
+            .modal-xl {
+                --bs-modal-width: 65vw;
+            }
+
+            /* lg breakpoint */
+            .navbar-nav .nav-item {
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-transparent">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"><img src="logo.svg" alt="Logo PIC Medan" class="me-2 logo"
+                    style="height: 32px;">PIC MEDAN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="promo.html">Promo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items:center">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="themeSwitch">
+                        <label class="form-check-label" for="themeSwitch"></label>
+                    </div>
+                    <i class="bi bi-brightness-high-fill"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="swiper swiper-hero">
+            <div class="swiper-wrapper">
+            </div>
+            <div class="swiper-button-prev hero-button-prev">
+                <i class="bi bi-arrow-left-circle-fill"></i>
+            </div>
+
+            <div class="swiper-button-next hero-button-next">
+                <i class="bi bi-arrow-right-circle-fill"></i>
+            </div>
+            <div class="swiper-pagination hero-pagination"></div>
+        </div>
+    </section>
+
+    <section id="whatsapp-form-bar" class="py-4 shadow-sm">
+        <div class="container">
+            <form id="waFormBar" class="row g-3 align-items-center" novalidate>
+                <div class="col-lg-3 col-md-6">
+                    <label for="waName" class="visually-hidden">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="waName" placeholder="Nama Lengkap" required>
+                    <div class="invalid-feedback">Mohon isi nama Anda.</div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <label for="waEmail" class="visually-hidden">Alamat Email</label>
+                    <input type="email" class="form-control" id="waEmail" placeholder="Contoh: nama@mail.com" required>
+                    <div class="invalid-feedback">Mohon isi email yang valid.</div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <label for="waPhone" class="visually-hidden">No. WhatsApp</label>
+                    <input type="tel" class="form-control" id="waPhone" placeholder="Contoh: 081234567890" required>
+                    <div class="invalid-feedback">Mohon isi No. WhatsApp Anda.</div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <button type="submit" class="btn btn-primary w-100 fw-bold">Hubungi Kami Sekarang</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <main>
+        <section id="about" class="py-5">
+            <div class="container my-5">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-4 animate-on-scroll">
+                        <div class="about-image-wrapper">
+                            <img src="" class="img-fluid about-image" alt="Tentang Pesona Indah Cemara">
+                        </div>
+                    </div>
+                    <div class="col-lg-8 animate-on-scroll" style="transition-delay: 200ms;">
+                        <h2 class="section-title mb-4"></h2>
+                        <p class="lead"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="py-5">
+            <div class="container my-5">
+                <div class="text-center mb-5 animate-on-scroll">
+                    <h2 class="section-title">Produk Unggulan Kami</h2>
+                    <p class="lead text-muted">Pilihan properti terbaik yang dirancang untuk setiap kebutuhan.</p>
+                </div>
+
+                <!-- <ul class="nav nav-pills justify-content-center mb-5" id="product-filter-tabs" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" data-filter="Eropa">Cluster Eropa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-filter="Asia">Cluster Asia</a>
+                    </li>
+                </ul> -->
+                <div id="productList" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
+                    data-stagger-children="true">
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5" style="background-color: #0E2744; color: #adb5bd;">
+            <div class="container my-5">
+                <div class="text-center mb-5 animate-on-scroll">
+                    <h2 class="section-title white">Lokasi Pesona Indah Cemara</h2>
+                    <p class="lead white">Terletak strategis di kawasan berkembang dekat <strong>Cemara Asri</strong>
+                        dan
+                        hanya beberapa
+                        menit dari <strong>exit tol H. Anif</strong> yang berlokasi di Kota Medan, <strong>Pesona
+                            Indah Cemara</strong> menawarkan
+                        kenyamanan hidup modern di tengah akses yang serba mudah. Hunian ini dirancang untuk
+                        menghadirkan keseimbangan antara kemudahan mobilitas, lingkungan hijau yang menenangkan, dan
+                        fasilitas lengkap bagi seluruh keluarga.</p>
+                </div>
+                <img src="marketingmap.jpg" alt="" style="width: 100%;">
+            </div>
+        </section>
+
+        <section id="facilities" class="py-5 bg-body-tertiary">
+            <div class="container my-5">
+                <div class="text-center mb-5 animate-on-scroll">
+                    <h2 class="section-title" id="facilities-main-title">Fasilitas Kelas Dunia</h2>
+                    <p class="lead text-muted" id="facilities-main-desc">Semua yang Anda butuhkan untuk gaya hidup yang
+                        sempurna.</p>
+                </div>
+
+                <div class="row g-5 mt-5 animate-on-scroll">
+                    <div class="col-lg-12">
+                        <h3 class="mb-4" id="facilities-nearby-title">Fasilitas Sekitar</h3>
+                        <div class="row" id="facilities-nearby-list">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="facilities2" class="py-5" style="background-color: #0E2744; color: #adb5bd;">
+            <div class="container my-5">
+                <div class="mt-5 pt-4 animate-on-scroll">
+                    <div class="text-center mb-5">
+                        <h3 id="facilities-cluster-title">Fasilitas Cluster</h3>
+                    </div>
+                    <div id="facilities-cluster-list" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
+                        data-stagger-children="true">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="location" class="py-5">
+            <div class="container my-5">
+                <div class="row g-5">
+                    <div class="col-lg-12 animate-on-scroll" style="transition-delay: 200ms;">
+                        <h2 class="section-title mb-4">Lokasi Site</h2>
+                        <div class="ratio ratio-4x3 rounded-3 overflow-hidden shadow-lg">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.807469742171!2d98.70855497581309!3d3.631391549997248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303133002c53efa1%3A0xe20ecc48e1b9a8a9!2sPESONA%20INDAH%20CEMARA!5e0!3m2!1sen!2sid!4v1761826776845!5m2!1sen!2sid"
+                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-5 bg-body-tertiary">
+            <div class="container my-5">
+                <div class="text-center mb-5 animate-on-scroll">
+                    <h2 class="section-title">Hubungi Kami</h2>
+                    <p class="lead text-muted">Isi formulir di bawah ini dan tim kami akan segera menghubungi Anda.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-7 animate-on-scroll">
+                        <form id="mainContactForm" novalidate>
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Nama Lengkap</label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Nama Lengkap"
+                                    required>
+                                <div class="invalid-feedback">Mohon isi nama lengkap Anda.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="emailAddress" class="form-label">Alamat Email</label>
+                                <input type="email" class="form-control" id="emailAddress"
+                                    placeholder="Contoh: nama@email.com" required>
+                                <div class="invalid-feedback">Mohon isi alamat email yang valid.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="whatsappNumber" class="form-label">No. WhatsApp</label>
+                                <input type="tel" class="form-control" id="whatsappNumber"
+                                    placeholder="Contoh: 081234567890" required>
+                                <div class="invalid-feedback">Mohon isi No. WhatsApp Anda.</div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">Kirim Pesan</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-5" style="background-color: #0E2744; color: #adb5bd;">
+        <div class="container text-center text-md-start">
+            <div class="row gy-4">
+                <div class="col-lg-8 col-md-6">
+                    <h5 class="text-white"><img src="logo.svg" alt="Logo PIC Medan" class="me-2 logo"
+                            style="height: 32px;">Pesona Indah Cemara</h5>
+                    <p><strong>Pesona Indah Cemara</strong> hadir sebagai simbol gaya hidup modern di Kota Medan,
+                        menghadirkan
+                        keseimbangan sempurna antara kenyamanan hunian hijau dan ruang terbuka hijau yang luas dan akses
+                        mudah ke pusat kota. Sebuah kawasan terpadu yang dirancang untuk memberikan pengalaman hidup
+                        yang berkelas dan berkelanjutan.</p>
+                    <div class="mt-4">
+                        <a href="https://www.instagram.com/pic_medan/" target="_blank" class="text-white me-3"><i
+                                class="bi bi-instagram fs-4"></i></a>
+                    </div>
+                    <p class="pic_bold" style="margin-top: 1rem; margin-bottom: 0rem;">Pesona Indah Cemara</p>by <img
+                        src="logo_asg.svg" alt="Logo ASG" class="me-2 logo" style="height: 14px;">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white">Hubungi Kami</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-telephone-fill me-2"></i> 0812-9090-7080</li>
+                        <li><i class="bi bi-envelope-fill me-2"></i> sales@picmedan.com</li>
+                        <li><i class="bi bi-geo-alt-fill me-2"></i> Supermarket Brastagi, Jl. Cemara, Pulo Brayan
+                            Bengkel Baru, Kec. Medan Tim., Kota Medan, Sumatera Utara</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center pt-4 mt-4 border-top border-secondary">
+                <p>© 2025 PIC MEDAN All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="productDetailModal" tabindex="-1" aria-labelledby="productDetailModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable modal-detail">
+            <div class="modal-content" style="background-color: #0E2744;">
+                <div class="modal-header">
+                    <h5 class="modal-title white" id="productDetailModalLabel">Detail Produk</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="swiper swiper-modal mb-3">
+                                <div class="swiper-wrapper" id="modalGallery">
+                                </div>
+                                <div class="swiper-button-prev modal-button-prev">
+                                    <i class="bi bi-arrow-left-circle-fill"></i>
+                                </div>
+                                <div class="swiper-button-next modal-button-next">
+                                    <i class="bi bi-arrow-right-circle-fill"></i>
+                                </div>
+                                <div class="swiper-pagination modal-pagination" style="position: relative; bottom: 0;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <h3 id="modalProductName" class="white">Nama Produk</h3>
+                            <p id="modalDescription" class="white">Deskripsi detail tentang produk akan muncul di sini.
+                            </p>
+
+                            <div>
+                                <ul class="list-unstyled white" id="modalFeatures"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5 class="white">Spesifikasi</h5>
+                            <table class="table table-sm table-striped table-bordered table-dark">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Kategori</th>
+                                        <th scope="col">Subkategori</th>
+                                        <th scope="col">Spesifikasi</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="modalSpecs">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <a href="#whatsapp-form-bar" class="btn btn-primary" id="contactSalesBtn">
+                        <i class="bi bi-whatsapp me-2"></i>Hubungi Sales
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="imagePreviewModal" tabindex="-1" aria-hidden="true" style="z-index: 1090;">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content bg-transparent border-0">
+                <div class="modal-header border-0 p-0">
+                    <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3"
+                        style="z-index: 9999; cursor: pointer; outline: none; box-shadow: none;" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0 text-center d-flex justify-content-center align-items-center"
+                    style="min-height: 80vh;">
+                    <img id="fullPreviewImage" src="" class="img-fluid" style="max-height: 90vh; object-fit: contain;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://api.whatsapp.com/send/?phone=6281290907080" class="fab-whatsapp" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // --- DATA INJECTION ---
+            const productData = {
+                "products": [
+                    {
+                        "name": "Rukan Colosseum",
+                        "size": "75m²",
+                        "project": "PIC MEDAN",
+                        "cluster_type": "eropa",
+                        "price_idr": null,
+                        "area": "262.5m²",
+                        "bedrooms": 0,
+                        "bathrooms": "3",
+                        "floor": "3½",
+                        "carport": null,
+                        "image": "product/eropa/eropa1.jpg",
+                        "status": "available",
+                        "solar_heater": null,
+                        "ev_charger": null,
+                        "specification": {
+                            "SpesifikasiRukan": [
+                                { "Kategori": "Pondasi", "Subkategori": "Tiang Pancang", "Spesifikasi": "" },
+                                { "Kategori": "Struktur", "Subkategori": "Beton Bertulang", "Spesifikasi": "" },
+                                { "Kategori": "Atap", "Subkategori": "Rangka Atap", "Spesifikasi": "Baja Ringan" },
+                                { "Kategori": "Atap", "Subkategori": "Penutup Atap", "Spesifikasi": "Metal / Carbon Fibre Deck" },
+                                { "Kategori": "Plafon", "Subkategori": "Gypsum Board", "Spesifikasi": "Finishing Cat" },
+                                { "Kategori": "Dinding", "Subkategori": "Dinding Luar & Dalam", "Spesifikasi": "Bata Plester Finishing Cat" },
+                                { "Kategori": "Finishing Dinding", "Subkategori": "Dinding Dalam", "Spesifikasi": "Cat Interior" },
+                                { "Kategori": "Finishing Dinding", "Subkategori": "Dinding Luar", "Spesifikasi": "Cat Exterior (Weather Shield)" },
+                                { "Kategori": "Finishing Lantai", "Subkategori": "Kamar Mandi", "Spesifikasi": "Keramik 40x40" },
+                                { "Kategori": "Finishing Lantai", "Subkategori": "Ruang Utama", "Spesifikasi": "Homogeneous Tile 60x120" },
+                                { "Kategori": "Kusen", "Subkategori": "Aluminium / Kayu", "Spesifikasi": "" },
+                                { "Kategori": "Pintu", "Subkategori": "Pintu Aluminium Kaca", "Spesifikasi": "" },
+                                { "Kategori": "Jendela", "Subkategori": "Kaca Aluminium", "Spesifikasi": "" },
+                                { "Kategori": "Sanitair", "Subkategori": "Kamar Mandi", "Spesifikasi": "Ex. TOTO atau setara" },
+                                { "Kategori": "Sanitair", "Subkategori": "Wastafel", "Spesifikasi": "Ex. TOTO atau setara" },
+                                { "Kategori": "Instalasi", "Subkategori": "Daya Listrik", "Spesifikasi": "4400 W" },
+                                { "Kategori": "Instalasi", "Subkategori": "Instalasi Air", "Spesifikasi": "Instalasi air dengan kran" },
+                                { "Kategori": "Instalasi", "Subkategori": "Gas Negara", "Spesifikasi": "" },
+                                { "Kategori": "Lain-lain", "Subkategori": "Ground Tank & Roof Tank", "Spesifikasi": "" }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Amsterdam",
+                        "size": "150m²",
+                        "project": "PIC MEDAN",
+                        "cluster_type": "eropa",
+                        "price_idr": null,
+                        "area": "206m²",
+                        "bedrooms": "4+1",
+                        "bathrooms": "5+1",
+                        "floor": "2",
+                        "carport": "3",
+                        "image": "product/eropa/eropa2.jpg",
+                        "status": "available",
+                        "solar_heater": "yes",
+                        "ev_charger": "yes",
+                        "specification": {
+                            "SpesifikasiRumah": [
+                                { "Kategori": "Pondasi", "Subkategori": "Tiang Pancang", "Spesifikasi": "" },
+                                { "Kategori": "Struktur", "Subkategori": "Beton Bertulang", "Spesifikasi": "" },
+                                { "Kategori": "Atap", "Subkategori": "Rangka Atap", "Spesifikasi": "Baja Ringan" },
+                                { "Kategori": "Atap", "Subkategori": "Penutup Atap", "Spesifikasi": "Genteng Bitumen" },
+                                { "Kategori": "Plafon", "Subkategori": "Gypsum Board ", "Spesifikasi": "Finishing Cat" },
+                                { "Kategori": "Dinding", "Subkategori": "Dinding Luar & Dalam", "Spesifikasi": "Bata Plester Finishing Cat" },
+                                { "Kategori": "Dinding", "Subkategori": "Double Wall", "Spesifikasi": "" },
+                                { "Kategori": "Finishing Dinding", "Subkategori": "Dinding Dalam", "Spesifikasi": "Cat Interior" },
+                                { "Kategori": "Finishing Dinding", "Subkategori": "Dinding Luar", "Spesifikasi": "Cat Exterior (Weather Shield)" },
+                                { "Kategori": "Finishing Lantai", "Subkategori": "Kamar Mandi", "Spesifikasi": "Homogeneous Tile 60x60" },
+                                { "Kategori": "Finishing Lantai", "Subkategori": "Ruang Tamu & Tidur", "Spesifikasi": "Homogeneous Tile 60x120" },
+                                { "Kategori": "Kusen", "Subkategori": "Aluminium / Kayu", "Spesifikasi": "" },
+                                { "Kategori": "Pintu", "Subkategori": "Engineering Door", "Spesifikasi": "" },
+                                { "Kategori": "Pintu", "Subkategori": "Smart Door Lock", "Spesifikasi": "" },
+                                { "Kategori": "Jendela", "Subkategori": "Kaca Aluminium", "Spesifikasi": "" },
+                                { "Kategori": "Sanitair", "Subkategori": "Kamar Mandi", "Spesifikasi": "Ex. TOTO atau setara" },
+                                { "Kategori": "Sanitair", "Subkategori": "Meja Dapur", "Spesifikasi": "SINK 1 Lubang dengan kran" },
+                                { "Kategori": "Instalasi", "Subkategori": "Instalasi Charger Mobil Listrik", "Spesifikasi": "" },
+                                { "Kategori": "Instalasi", "Subkategori": "Daya Listrik", "Spesifikasi": "4400 W" },
+                                { "Kategori": "Instalasi", "Subkategori": "Instalasi Air", "Spesifikasi": "Instalasi Air dengan Kran" },
+                                { "Kategori": "Instalasi", "Subkategori": "AC", "Spesifikasi": "" },
+                                { "Kategori": "Lain-lain", "Subkategori": "Solar Water Heater", "Spesifikasi": "" },
+                                { "Kategori": "Lain-lain", "Subkategori": "Ground Tank & Roof Tank", "Spesifikasi": "" }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Barcelona",
+                        "size": "120m²",
+                        "project": "PIC MEDAN",
+                        "cluster_type": "eropa",
+                        "price_idr": null,
+                        "area": "169m²",
+                        "bedrooms": "4",
+                        "bathrooms": "4",
+                        "floor": "2",
+                        "carport": "2",
+                        "image": "product/eropa/eropa3.jpg",
+                        "status": "available",
+                        "solar_heater": "yes",
+                        "ev_charger": "yes",
+                        "specification": {
+                            "SpesifikasiRumah": [
+                                { "Kategori": "Pondasi", "Subkategori": "Tiang Pancang", "Spesifikasi": "" },
+                                { "Kategori": "Struktur", "Subkategori": "Beton Bertulang", "Spesifikasi": "" },
+                                { "Kategori": "Atap", "Subkategori": "Rangka Atap", "Spesifikasi": "Baja Ringan" },
+                                { "Kategori": "Atap", "Subkategori": "Penutup Atap", "Spesifikasi": "Genteng Bitumen" },
+                                { "Kategori": "Plafon", "Subkategori": "Gypsum Board ", "Spesifikasi": "Finishing Cat" },
+                                { "Kategori": "Dinding", "Subkategori": "Dinding Luar & Dalam", "Spesifikasi": "Bata Plester Finishing Cat" },
+                                { "Kategori": "Dinding", "Subkategori": "Double Wall", "Spesifikasi": "" },
+                                { "Kategori": "Finishing Dinding", "Subkategori": "Dinding Dalam", "Spesifikasi": "Cat Interior" },
+                                { "Kategori": "Finishing Dinding", "Subkategori": "Dinding Luar", "Spesifikasi": "Cat Exterior (Weather Shield)" },
+                                { "Kategori": "Finishing Lantai", "Subkategori": "Kamar Mandi", "Spesifikasi": "Homogeneous Tile 60x60" },
+                                { "Kategori": "Finishing Lantai", "Subkategori": "Ruang Tamu & Tidur", "Spesifikasi": "Homogeneous Tile 60x120" },
+                                { "Kategori": "Kusen", "Subkategori": "Aluminium / Kayu", "Spesifikasi": "" },
+                                { "Kategori": "Pintu", "Subkategori": "Engineering Door", "Spesifikasi": "" },
+                                { "Kategori": "Pintu", "Subkategori": "Smart Door Lock", "Spesifikasi": "" },
+                                { "Kategori": "Jendela", "Subkategori": "Kaca Aluminium", "Spesifikasi": "" },
+                                { "Kategori": "Sanitair", "Subkategori": "Kamar Mandi", "Spesifikasi": "Ex. TOTO atau setara" },
+                                { "Kategori": "Sanitair", "Subkategori": "Meja Dapur", "Spesifikasi": "SINK 1 Lubang dengan kran" },
+                                { "Kategori": "Instalasi", "Subkategori": "Instalasi Charger Mobil Listrik", "Spesifikasi": "" },
+                                { "Kategori": "Instalasi", "Subkategori": "Daya Listrik", "Spesifikasi": "4400 W" },
+                                { "Kategori": "Instalasi", "Subkategori": "Instalasi Air", "Spesifikasi": "Instalasi Air dengan Kran" },
+                                { "Kategori": "Instalasi", "Subkategori": "AC", "Spesifikasi": "" },
+                                { "Kategori": "Lain-lain", "Subkategori": "Solar Water Heater", "Spesifikasi": "" },
+                                { "Kategori": "Lain-lain", "Subkategori": "Ground Tank & Roof Tank", "Spesifikasi": "" }
+                            ]
+                        }
+                    },
+                    {
+                        "name": "Cambridge",
+                        "size": "90m²",
+                        "project": "PIC MEDAN",
+                        "cluster_type": "eropa",
+                        "price_idr": null,
+                        "area": "129m²",
+                        "bedrooms": "3",
+                        "bathrooms": "3",
+                        "floor": "2",
+                        "carport": "2",
+                        "image": "product/eropa/eropa4.jpg",
+                        "status": "available",
+                        "solar_heater": "yes",
+                        "ev_charger": "yes",
+                        "specification": {
+                            "SpesifikasiRumah": [
+                                { "Kategori": "Pondasi", "Subkategori": "Tiang Pancang", "Spesifikasi": "" },
+                                { "Kategori": "Struktur", "Subkategori": "Beton Bertulang", "Spesifikasi": "" },
+                                { "Kategori": "Atap", "Subkategori": "Rangka Atap", "Spesifikasi": "Baja Ringan" },
+                                { "Kategori": "Atap", "Subkategori": "Penutup Atap", "Spesifikasi": "Genteng Bitumen" },
+                                { "Kategori": "Plafon", "Subkategori": "Gypsum Board ", "Spesifikasi": "Finishing Cat" },
+                                { "Kategori": "Dinding", "Subkategori": "Dinding Luar & Dalam", "Spesifikasi": "Bata Plester Finishing Cat" },
+                                { "Kategori": "Dinding", "Subkategori": "Double Wall", "Spesifikasi": "" },
+                                { "Kategori": "Finishing Dinding", "Subkategori": "Dinding Dalam", "Spesifikasi": "Cat Interior" },
+                                { "Kategori": "Finishing Dinding", "Subkategori": "Dinding Luar", "Spesifikasi": "Cat Exterior (Weather Shield)" },
+                                { "Kategori": "Finishing Lantai", "Subkategori": "Kamar Mandi", "Spesifikasi": "Homogeneous Tile 60x60" },
+                                { "Kategori": "Finishing Lantai", "Subkategori": "Ruang Tamu & Tidur", "Spesifikasi": "Homogeneous Tile 60x120" },
+                                { "Kategori": "Kusen", "Subkategori": "Aluminium / Kayu", "Spesifikasi": "" },
+                                { "Kategori": "Pintu", "Subkategori": "Engineering Door", "Spesifikasi": "" },
+                                { "Kategori": "Pintu", "Subkategori": "Smart Door Lock", "Spesifikasi": "" },
+                                { "Kategori": "Jendela", "Subkategori": "Kaca Aluminium", "Spesifikasi": "" },
+                                { "Kategori": "Sanitair", "Subkategori": "Kamar Mandi", "Spesifikasi": "Ex. TOTO atau setara" },
+                                { "Kategori": "Sanitair", "Subkategori": "Meja Dapur", "Spesifikasi": "SINK 1 Lubang dengan kran" },
+                                { "Kategori": "Instalasi", "Subkategori": "Instalasi Charger Mobil Listrik", "Spesifikasi": "" },
+                                { "Kategori": "Instalasi", "Subkategori": "Daya Listrik", "Spesifikasi": "4400 W" },
+                                { "Kategori": "Instalasi", "Subkategori": "Instalasi Air", "Spesifikasi": "Instalasi Air dengan Kran" },
+                                { "Kategori": "Instalasi", "Subkategori": "AC", "Spesifikasi": "" },
+                                { "Kategori": "Lain-lain", "Subkategori": "Solar Water Heater", "Spesifikasi": "" },
+                                { "Kategori": "Lain-lain", "Subkategori": "Ground Tank & Roof Tank", "Spesifikasi": "" }
+                            ]
+                        }
+                    }
+                    // Asia
+                    , {
+                        "name": "Rukan Oriental",
+                        "size": "----",
+                        "project": "PIC MEDAN",
+                        "cluster_type": "asia",
+                        "price_idr": null,
+                        "area": "----",
+                        "bedrooms": 0,
+                        "bathrooms": "----",
+                        "floor": "----",
+                        "carport": null,
+                        "image": "product/asia/asia1.jpg",
+                        "status": "available",
+                        "solar_heater": null,
+                        "ev_charger": null,
+                        "specification": {
+                            "SpesifikasiRukan": [
+                                { "Kategori": "Pondasi", "Subkategori": "Tiang Pancang", "Spesifikasi": "" },
+                                // { "Kategori": "Struktur", "Subkategori": "Beton Bertulang", "Spesifikasi": "" },
+                                // { "Kategori": "Atap", "Subkategori": "Rangka Atap", "Spesifikasi": "Baja Ringan" },
+                                // { "Kategori": "Atap", "Subkategori": "Penutup Atap", "Spesifikasi": "Metal / Carbon Fibre Deck" },
+                                // { "Kategori": "Plafon", "Subkategori": "Gypsum Board", "Spesifikasi": "Finishing Cat" },
+                                // { "Kategori": "Dinding", "Subkategori": "Dinding Luar & Dalam", "Spesifikasi": "Bata Plester Finishing Cat" },
+                                // { "Kategori": "Finishing Dinding", "Subkategori": "Dinding Dalam", "Spesifikasi": "Cat Interior" },
+                                // { "Kategori": "Finishing Dinding", "Subkategori": "Dinding Luar", "Spesifikasi": "Cat Exterior (Weather Shield)" },
+                                // { "Kategori": "Finishing Lantai", "Subkategori": "Kamar Mandi", "Spesifikasi": "Keramik 40x40" },
+                                // { "Kategori": "Finishing Lantai", "Subkategori": "Ruang Utama", "Spesifikasi": "Homogeneous Tile 60x120" },
+                                // { "Kategori": "Kusen", "Subkategori": "Aluminium / Kayu", "Spesifikasi": "" },
+                                // { "Kategori": "Pintu", "Subkategori": "Pintu Aluminium Kaca", "Spesifikasi": "" },
+                                // { "Kategori": "Jendela", "Subkategori": "Kaca Aluminium", "Spesifikasi": "" },
+                                // { "Kategori": "Sanitair", "Subkategori": "Kamar Mandi", "Spesifikasi": "Ex. TOTO atau setara" },
+                                // { "Kategori": "Sanitair", "Subkategori": "Wastafel", "Spesifikasi": "Ex. TOTO atau setara" },
+                                // { "Kategori": "Instalasi", "Subkategori": "Daya Listrik", "Spesifikasi": "4400 W" },
+                                // { "Kategori": "Instalasi", "Subkategori": "Instalasi Air", "Spesifikasi": "Instalasi air dengan kran" },
+                                // { "Kategori": "Instalasi", "Subkategori": "Gas Negara", "Spesifikasi": "" },
+                                // { "Kategori": "Lain-lain", "Subkategori": "Ground Tank & Roof Tank", "Spesifikasi": "" }
+                            ]
+                        }
+                    },
+
+                ]
+            };
+
+            const carouselData = { "slides": [{ "image": "carousel/c1.jpg", "title": "Gerbang Kawasan", "subtitle": "One Gate System & keamanan 24 jam.", "btn_text": "Jelajahi Fasilitas", "btn_link": "#facilities" }, { "image": "carousel/c1.jpg", "title": "Gerbang Kawasan", "subtitle": "One Gate System & keamanan 24 jam.", "btn_text": "Jelajahi Fasilitas", "btn_link": "#facilities" }, { "image": "carousel/c2.jpg", "title": "Landmark", "subtitle": "Lebih dari sekadar penanda lokasi, landmark ini menjadi simbol inovasi, harmoni, dan estetika yang menggambarkan visi Pesona Indah Cemara sebagai kawasan hunian dan bisnis yang penuh gaya, berkelas, dan berjiwa kota.", "btn_text": "Jelajahi Fasilitas", "btn_link": "#facilities" }, { "image": "carousel/c3.jpg", "title": "Landmark", "subtitle": "Lebih dari sekadar penanda lokasi, landmark ini menjadi simbol inovasi, harmoni, dan estetika yang menggambarkan visi Pesona Indah Cemara sebagai kawasan hunian dan bisnis yang penuh gaya, berkelas, dan berjiwa kota.", "btn_text": "Jelajahi Fasilitas", "btn_link": "#facilities" }, { "image": "carousel/c4.jpg", "title": "Retail Hub", "subtitle": "Retail Hub ini menghadirkan supermarket dan area komersial bergaya modern klasik yang elegan. Tempat ini menjadi destinasi ideal untuk memenuhi kebutuhan harian, menikmati kuliner, dan berkumpul bersama keluarga. Sebuah pusat aktivitas yang praktis, modern, dan penuh kenyamanan.", "btn_text": "Temukan Tipe Unit", "btn_link": "#products" }, { "image": "carousel/c5.jpg", "title": "Retail Hub", "subtitle": "Retail Hub ini menghadirkan supermarket dan area komersial bergaya modern klasik yang elegan. Tempat ini menjadi destinasi ideal untuk memenuhi kebutuhan harian, menikmati kuliner, dan berkumpul bersama keluarga. Sebuah pusat aktivitas yang praktis, modern, dan penuh kenyamanan.", "btn_text": "Temukan Tipe Unit", "btn_link": "#products" }, { "image": "carousel/c6.jpg", "title": "Clubhouse", "subtitle": "Clubhouse ini menghadirkan suasana dinamis dengan ruang multifungsi fleksibel yang ideal untuk berbagai acara dan pertemuan, serta area lounge indoor dan outdoor yang nyaman untuk bersantai maupun bersosialisasi.", "btn_text": "Jelajahi Fasilitas", "btn_link": "#facilities" }, { "image": "carousel/c7.jpg", "title": "Clubhouse", "subtitle": "Clubhouse ini menghadirkan suasana dinamis dengan ruang multifungsi fleksibel yang ideal untuk berbagai acara dan pertemuan, serta area lounge indoor dan outdoor yang nyaman untuk bersantai maupun bersosialisasi.", "btn_text": "Jelajahi Fasilitas", "btn_link": "#facilities" }, { "image": "carousel/c8.jpg", "title": "Cafe", "subtitle": "Pesona Indah Cemara", "btn_text": "Jelajahi Fasilitas", "btn_link": "#facilities" }] };
+            const aboutData = { "image_path": "about/a1.jpg", "title": "About Us", "description": "<strong>Pesona Indah Cemara</strong> — persembahan istimewa dari <strong>Agung Sedayu Group</strong>, dikembangkan di atas lahan premium seluas <strong>44 hektar</strong>, siap menjadi proyek paling <strong>TOP</strong> di Kota Medan sekaligus hunian eksklusif modern yang menghadirkan harmoni antara kenyamanan hidup dan peluang investasi yang menjanjikan.</br></br>Dirancang dengan konsep <strong>“Aman dan Nyaman”</strong>, Pesona Indah Cemara menghadirkan kawasan hunian yang elegan, pusat komersial dan one gate system, clubhouse premium, supermarket, sekolah & klinik Tzu Chi, fasilitas olahraga modern, taman tematik, serta ruang terbuka hijau yang luas dan akses mudah ke pusat kota.</br></br>Berlokasi strategis di kawasan </strong>Cemara Asri</strong>, hanya beberapa menit dari <strong>Exit Tol H.Anif</strong>, kawasan ini menawarkan <strong>gaya hidup baru yang lebih baik (a new level of living)</strong> serta <strong>potensi investasi bernilai tinggi</strong> dalam waktu singkat.</br></br>Dengan integrasi sempurna antara <strong>hunian hijau yang nyaman</strong> dan <strong>kawasan bisnis yang strategis</strong>, Pesona Indah Cemara siap menjadi <strong>hunian masa depan, ternyaman, dan terlengkap di Medan</strong>. </br></br>Selamat datang di <strong>Pesona Indah Cemara</strong>, di mana <strong>kemewahan, kenyamanan, dan keunggulan</strong> berpadu dalam harmoni sempurna." };
+
+            const facilitiesData = {
+                "fasilitas": {
+                    "deskripsi_umum": {
+                        "judul": "Dikelilingi Akses Prestisius Kota",
+                        "deskripsi": "Dikelilingi akses prestisius kota dari universitas ternama, gerbang tol strategis, sekolah berkualitas, hingga pusat gaya hidup modern. Pesona Indah Cemara adalah hunian eksklusif yang dirancang untuk menemani perjalanan hidup Anda, kini dan di masa depan."
+                    },
+                    "fasilitas_sekitar": {
+                        "judul": "Fasilitas Sekitar",
+                        "daftar": [
+                            { "nama": "Exit Tol H. Anif", "jarak": "1 Menit" },
+                            { "nama": "Universitas Negeri Medan", "jarak": "2 Menit" },
+                            { "nama": "Medan Metropolitan Trade Center", "jarak": "3 Menit" },
+                            { "nama": "RS Columbia Asia Aksara", "jarak": "5 Menit" },
+                            { "nama": "Pusat Kota", "jarak": "10 Menit" },
+                            { "nama": "Universitas Sumatera Utara", "jarak": "12 Menit" },
+                            { "nama": "Kualanamu International Airport", "jarak": "20 Menit" },
+                            { "nama": "Pelabuhan Belawan", "jarak": "20 Menit" }
+                        ]
+                    },
+                    "fasilitas_cluster": {
+                        "judul": "Fasilitas Cluster",
+                        "daftar": [
+                            {
+                                "nama": "Taman Tematik",
+                                "image": "facilities/taman_tematik.png"
+                            },
+                            {
+                                "nama": "Kolam Renang",
+                                "image": "facilities/kolam_renang.png"
+                            },
+                            {
+                                "nama": "Lapangan Padel",
+                                "image": "facilities/lapangan_padel.png"
+                            },
+                            {
+                                "nama": "Jalur Jogging",
+                                "image": "facilities/jalur_jogging.png"
+                            },
+                            {
+                                "nama": "Gazebo",
+                                "image": "facilities/gazebo.png"
+                            },
+                            {
+                                "nama": "Taman Bermain Anak",
+                                "image": "facilities/taman_bermain_anak.png"
+                            }
+                        ]
+                    }
+                }
+            };
+
+            const productDetails = [
+                // Eropa
+                { gallery: ["product/eropa/eropa1.jpg", "product/eropa/eropa1_alt.jpg", "product/eropa/gerbang_eropa.jpg"], description: "Rukan Colosseum adalah unit komersial 3.5 lantai yang sempurna untuk bisnis Anda di lokasi premium." },
+                { gallery: ["product/eropa/eropa2.jpg", "product/eropa/eropa2_alt.jpg", "product/eropa/gerbang_eropa.jpg", "facilities/fas_cluster_alt.jpg", "facilities/fas_cluster_alt2.jpg"], description: "Rumah mewah Amsterdam dengan desain Eropa, 4+1 kamar tidur, dan fasilitas modern." },
+                { gallery: ["product/eropa/eropa3.jpg", "product/eropa/eropa3_alt.jpg", "product/eropa/gerbang_eropa.jpg", "facilities/fas_cluster_alt.jpg", "facilities/fas_cluster_alt2.jpg"], description: "Barcelona, hunian compact 8x15m yang fungsional, ideal untuk keluarga (saat ini terjual)." },
+                { gallery: ["product/eropa/eropa4.jpg", "product/eropa/eropa4_alt.jpg", "product/eropa/gerbang_eropa.jpg", "facilities/fas_cluster_alt.jpg", "facilities/fas_cluster_alt2.jpg"], description: "Cambridge 6x15m, rumah 3 kamar tidur dengan pencahayaan alami dan sirkulasi udara optimal." },
+                // Asia
+                { gallery: ["product/asia/asia1.jpg", "product/asia/asia1_alt.jpg", "product/asia/gerbang_asia.jpg", "facilities/fas_cluster_alt.jpg", "facilities/fas_cluster_alt2.jpg"], description: "---" }
+            ];
+            // --- END DATA INJECTION ---
+
+
+            function scrollToWaForm() {
+                const waFormBar = document.getElementById('whatsapp-form-bar');
+                const waForm = document.getElementById('waFormBar');
+
+                if (waFormBar && waForm) {
+                    waFormBar.scrollIntoView({ behavior: 'smooth' });
+                    waForm.classList.add('was-validated');
+                    document.getElementById('waName').focus();
+                }
+            }
+
+            function trySendWaFromBar(productName = null) {
+                const waForm = document.getElementById('waFormBar');
+                const nameEl = document.getElementById('waName');
+                const emailEl = document.getElementById('waEmail');
+                const phoneEl = document.getElementById('waPhone');
+
+                if (waForm.checkValidity()) {
+                    const name = nameEl.value;
+                    const email = emailEl.value;
+                    const phone = phoneEl.value;
+
+                    let message = `Halo PIC MEDAN, saya ingin dihubungi:\n\n` +
+                        `Nama: ${name}\n` +
+                        `Email: ${email}\n` +
+                        `No. WhatsApp: ${phone}\n\n`;
+
+                    if (productName) {
+                        message += `Saya tertarik dengan properti: ${productName}\n\n`;
+                    }
+
+                    message += `Terima kasih.`;
+
+                    // Mengarahkan ke nomor Sales Anda, bukan nomor user
+                    const salesWaNumber = '6281290907080';
+
+                    const waUrl = `https://api.whatsapp.com/send/?phone=${salesWaNumber}&text=${encodeURIComponent(message)}`;
+                    window.open(waUrl, '_blank');
+
+                    waForm.classList.remove('was-validated');
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+
+            // --- DYNAMIC CONTENT POPULATION ---
+
+            // 1. Populate Hero Carousel
+            const heroWrapper = document.querySelector('.swiper-hero .swiper-wrapper');
+            heroWrapper.innerHTML = '';
+            carouselData.slides.forEach((slide, index) => {
+
+                // === SLIDE 1 (LOCAL VIDEO) ===
+                if (index === 0) {
+                    const slideHTML = `
+              <div class="swiper-slide slide-with-video" data-swiper-autoplay="10000000">
+                        <video id="hero-video-player" class="hero-video" muted playsinline autoplay>
+                            <source src="carousel/pic_video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+              </div>
+              `;
+                    heroWrapper.innerHTML += slideHTML;
+                }
+                // === SLIDE LAINNYA (GAMBAR) ===
+                else {
+                    const slideHTML = `
+                    <div class="swiper-slide" style="background-image:url(${slide.image})" data-swiper-autoplay="5000">
+                        <div class="slide-content">
+                            <h1 class="hero-title">${slide.title}</h1>
+                            <p>${slide.subtitle}</p>
+                            <a href="${slide.btn_link}" class="btn btn-primary mt-3">${slide.btn_text}</a>
+                        </div>
+                    </div>
+                    `;
+                    heroWrapper.innerHTML += slideHTML;
+                }
+            });
+
+            // 2. Populate About Section
+            document.querySelector('#about .about-image').src = aboutData.image_path;
+            document.querySelector('#about .section-title').textContent = aboutData.title;
+            document.querySelector('#about .lead').innerHTML = aboutData.description;
+
+            // 3. Populate Facilities Section
+            const facilitiesDataJson = facilitiesData.fasilitas;
+
+            document.getElementById('facilities-main-title').textContent = facilitiesDataJson.deskripsi_umum.judul;
+            document.getElementById('facilities-main-desc').textContent = facilitiesDataJson.deskripsi_umum.deskripsi;
+            document.getElementById('facilities-nearby-title').textContent = facilitiesDataJson.fasilitas_sekitar.judul;
+            document.getElementById('facilities-cluster-title').textContent = facilitiesDataJson.fasilitas_cluster.judul;
+
+            // Populate Nearby Facilities
+            const nearbyListContainer = document.getElementById('facilities-nearby-list');
+            nearbyListContainer.innerHTML = '';
+            let nearbyListHtmlCol1 = '<ul class="list-unstyled nearby-facility-list">';
+            let nearbyListHtmlCol2 = '<ul class="list-unstyled nearby-facility-list">';
+            const midPoint = Math.ceil(facilitiesDataJson.fasilitas_sekitar.daftar.length / 2);
+
+            facilitiesDataJson.fasilitas_sekitar.daftar.forEach((item, index) => {
+                const itemHtml = `<li><i class="bi bi-pin-map-fill me-2"></i><strong>${item.nama}</strong> - ${item.jarak}</li>`;
+                if (index < midPoint) {
+                    nearbyListHtmlCol1 += itemHtml;
+                } else {
+                    nearbyListHtmlCol2 += itemHtml;
+                }
+            });
+            nearbyListHtmlCol1 += '</ul>';
+            nearbyListHtmlCol2 += '</ul>';
+            nearbyListContainer.innerHTML = `<div class="col-md-6">${nearbyListHtmlCol1}</div><div class="col-md-6">${nearbyListHtmlCol2}</div>`;
+
+
+            // Populate Cluster Facilities
+            const clusterListContainer = document.getElementById('facilities-cluster-list');
+            clusterListContainer.innerHTML = '';
+            facilitiesDataJson.fasilitas_cluster.daftar.forEach((item, index) => {
+                const cardHtml = `
+                <div class="col animate-on-scroll">
+                    <div class="card h-100 facility-card shadow-sm">
+                        <img src="${item.image}" class="card-img-top" alt="${item.nama}" onerror="this.src='https://placehold.co/400x200?text=Gambar+Tidak+Tersedia'; this.alt='Placeholder Image';">
+                        <div class="card-footer text-center">
+                            <h6 class="mb-0">${item.nama}</h6>
+                        </div>
+                    </div>
+                </div>
+            `;
+                clusterListContainer.innerHTML += cardHtml;
+            });
+
+
+            // 4. Populate Product List
+            // --- MODIFIKASI DIMULAI DARI SINI ---
+            const productList = document.getElementById('productList');
+
+            // MODIFIED: Mengubah filter default menjadi 'Eropa'
+            function populateProducts(filter = 'Eropa') {
+                if (!productList) return;
+
+                productList.innerHTML = '';
+
+                // Filter produk berdasarkan cluster_type
+                const filteredProducts = productData.products.filter(p => {
+                    // MODIFIED: Menghapus logika 'Semua'
+                    return p.cluster_type.toLowerCase() === filter.toLowerCase();
+                });
+
+                // Tampilkan pesan jika tidak ada produk
+                if (filteredProducts.length === 0) {
+                    productList.innerHTML = '<div class="col-12"><p class="text-center text-muted">Tidak ada produk yang ditemukan untuk filter ini.</p></div>';
+                    return; // Keluar dari fungsi jika tidak ada produk
+                }
+
+                // Loop HANYA pada produk yang sudah difilter
+                filteredProducts.forEach((p) => {
+                    // Dapatkan index ASLI dari produk untuk modal
+                    const index = productData.products.indexOf(p);
+
+                    const statusBadge = `<span class="badge bg-${p.status === 'available' ? 'success' : 'danger'}" style="position: absolute; top: 15px; right: 15px;">${p.status === 'available' ? 'Available' : 'available'}</span>`;
+
+                    const priceHtml = p.price_idr ? `<h5 class="fw-bold text-primary mt-auto">${new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(p.price_idr)}</h5>` : '';
+
+                    const productNameSafe = p.name.replace(/'/g, "'").replace(/"/g, '"');
+
+                    let buttonsHtml = '';
+
+                    if (p.status === 'available') {
+                        buttonsHtml = `<div class="d-flex gap-2 mt-auto"><button type="button" class="btn btn-outline-primary w-100-extend" data-bs-toggle="modal" data-bs-target="#productDetailModal" data-index="${index}"><i class="bi bi-search me-1"></i> Detail</button></div>`;
+                    } else {
+                        buttonsHtml = `<div class="d-flex gap-2 mt-auto"><button type="button" class="btn btn-outline-secondary w-50" data-bs-toggle="modal" data-bs-target="#productDetailModal" data-index="${index}"><i class="bi bi-search me-1"></i> Detail</button><button class="btn btn-secondary w-50" disabled>Terjual</button></div>`;
+                    }
+
+                    const featuresIcons = [
+                        p.solar_heater === 'yes' ? `<li class="list-inline-item me-2" title="Solar Water Heater"><i class="bi bi-thermometer-sun fs-5 text-warning"></i></li>` : '',
+                        p.ev_charger === 'yes' ? `<li class="list-inline-item" title="EV Charger Ready"><i class="bi bi-ev-station fs-5 text-info"></i></li>` : ''
+                    ].filter(Boolean).join('');
+
+                    const specs = [
+                        p.size ? `<li class="col-6 luasbangunantanah"><i class="bi bi-rulers me-2 text-primary"></i><strong class="white">Luas Tanah ${p.size}</strong></li>` : '',
+                        p.area ? `<li class="col-6 luasbangunantanah" style="float: left;"><i class="bi bi-building me-2 text-primary"></i><strong class="white">Luas Bangunan ${p.area}</strong></li>` : '',
+                        (p.size || p.area) && (p.bedrooms || p.bathrooms || p.carport)
+                            ? `<li class="col-12"><hr class="my-2" style="border-top: 1px solid white; opacity: 1;"></li>`
+                            : '', p.bedrooms ? `<li><i class="bi bi-door-open me-2 text-primary"></i><strong class="white">${p.bedrooms} Bedroom</strong></li>` : '',
+                        p.bathrooms ? `<li><i class="bi bi-droplet me-2 text-primary"></i><strong class="white">${p.bathrooms} Bathroom</strong></li>` : '',
+                        p.carport ? `<li><i class="bi bi-car-front me-2 text-primary"></i><strong class="white">${p.carport} Carport</strong></li>` : ''
+                    ].filter(Boolean).join('');
+
+
+                    productList.innerHTML += `
+                    <div class="col-lg-4 col-md-6 animate-on-scroll">
+                        <div class="card product-card h-100 white" style="background-color: #0E2744;">
+                            <img src="${p.image}" class="card-img-top img-blur" alt="${p.name}" style="height: 220px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/400x220?text=Gambar+Tidak+Tersedia'; this.alt='Placeholder Image';">
+                            ${statusBadge}
+                            <div class="card-body d-flex flex-column">
+                                <div class="d-flex justify-content-between align-items-start">
+                                     <div>
+                                        <h3 class="card-title mb-0">${p.name}</h3>
+                                     </div>
+                                     <ul class="list-inline mb-0 ms-2">${featuresIcons}</ul>
+                                </div>
+                                <ul class="list-unstyled mt-3 mb-4 text-muted flex-grow-1">${specs}</ul>
+                                ${priceHtml}
+                                ${buttonsHtml}
+                            </div>
+                        </div>
+                    </div>`;
+                });
+
+                // Panggil kembali observer animasi SETELAH elemen baru ditambahkan
+                initObservers();
+
+            }
+
+            // Panggil fungsi populateProducts saat halaman dimuat pertama kali (tampilkan 'Eropa')
+            populateProducts('Eropa'); // <-- MODIFIED
+
+            // Tambahkan Event Listener untuk Tab Filter
+            const filterTabs = document.querySelectorAll('#product-filter-tabs .nav-link');
+
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', function (e) {
+                    e.preventDefault(); // Mencegah link berpindah halaman
+
+                    // 1. Hapus 'active' dari semua tab
+                    filterTabs.forEach(t => t.classList.remove('active'));
+
+                    // 2. Tambahkan 'active' ke tab yang diklik
+                    this.classList.add('active');
+
+                    // 3. Ambil nilai filter dari atribut data-filter
+                    const filterValue = this.getAttribute('data-filter');
+
+                    // 4. Panggil ulang fungsi populateProducts dengan filter baru
+                    populateProducts(filterValue);
+                });
+            });
+            // --- MODIFIKASI BERAKHIR DI SINI ---
+            // --- END DYNAMIC CONTENT POPULATION ---
+
+
+            function animateHeroText(activeSlide) {
+                if (!activeSlide) return;
+                const title = activeSlide.querySelector('.hero-title');
+                if (title && !title.classList.contains('animated')) {
+                    const text = title.textContent;
+                    title.innerHTML = text.replace(/\S/g, "<span class='letter'>$&</span>");
+                    title.classList.add('animated');
+
+                    anime.timeline({ loop: false })
+                        .add({
+                            targets: '.swiper-slide-active .letter',
+                            translateY: [20, 0],
+                            translateX: [10, 0],
+                            scale: [0.8, 1],
+                            opacity: [0, 1],
+                            easing: "easeOutExpo",
+                            duration: 1200,
+                            delay: (el, i) => 50 * i
+                        });
+                }
+            }
+
+            // --- INISIALISASI SWIPER & LOCAL VIDEO ---
+
+            // 1. Deklarasikan variabel di scope yang lebih luas
+            var heroSwiper = null;
+            var localVideoPlayer = null;
+
+            // 2. Inisialisasi Swiper
+            heroSwiper = new Swiper(".swiper-hero", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                loop: true,
+                autoplay: { // Autoplay Swiper untuk slide gambar
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                coverflowEffect: {
+                    rotate: 10,
+                    stretch: 25,
+                    depth: 200,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                pagination: {
+                    el: ".hero-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".hero-button-next",
+                    prevEl: ".hero-button-prev",
+                },
+                on: {
+                    init: function (swiper) {
+                        setTimeout(() => animateHeroText(swiper.slides[swiper.activeIndex]), 100);
+                        
+                        // Get video element and setup event listeners
+                        localVideoPlayer = document.getElementById('hero-video-player');
+                        if (localVideoPlayer) {
+                            // Event when video ends
+                            localVideoPlayer.addEventListener('ended', function() {
+                                if (heroSwiper) {
+                                    heroSwiper.slideNext();
+                                }
+                            });
+                        }
+                        
+                        // Cek slide aktif saat init
+                        const activeSlide = swiper.slides[swiper.activeIndex];
+                        if (activeSlide.classList.contains('slide-with-video')) {
+                            swiper.autoplay.stop();
+                        } else {
+                            swiper.autoplay.start();
+                        }
+                    },
+                    slideChangeTransitionStart: function (swiper) {
+                        // Reset animasi teks
+                        const titles = document.querySelectorAll('.hero-title.animated');
+                        titles.forEach(t => {
+                            t.classList.remove('animated');
+                            t.innerHTML = t.textContent;
+                        });
+                    },
+                    slideChange: function (swiper) {
+                        // Pause video saat slide berganti
+                        if (localVideoPlayer) {
+                            localVideoPlayer.pause();
+                            localVideoPlayer.currentTime = 0;
+                        }
+
+                        const activeSlide = swiper.slides[swiper.activeIndex];
+                        animateHeroText(activeSlide); // Animasikan teks slide baru
+
+                        if (activeSlide.classList.contains('slide-with-video')) {
+                            swiper.autoplay.stop(); // Matikan autoplay Swiper
+                        } else {
+                            swiper.autoplay.start(); // Hidupkan autoplay Swiper
+                        }
+                    }
+                }
+            });
+
+            const detailModal = document.getElementById('productDetailModal');
+            let modalSwiper = null;
+            let currentModalProductName = '';
+
+            detailModal.addEventListener('show.bs.modal', function (event) {
+                const button = event.relatedTarget;
+                const index = parseInt(button.getAttribute('data-index'));
+                const previewModalEl = document.getElementById('imagePreviewModal');
+                const myPreviewModal = new bootstrap.Modal(previewModalEl, {
+                    keyboard: true
+                });
+                const fullPreviewImage = document.getElementById('fullPreviewImage');
+
+                if (isNaN(index) || index < 0 || index >= productData.products.length || !productDetails[index]) {
+                    console.error("Data product atau productDetails tidak valid untuk index:", index);
+                    document.getElementById('modalProductImage').src = imageUrl;
+                    document.getElementById('modalProductName').textContent = "Data Produk Tidak Ditemukan";
+                    document.getElementById('modalDescription').textContent = "Maaf, terjadi kesalahan saat memuat detail produk.";
+                    document.getElementById('modalGallery').innerHTML = '<div class="swiper-slide d-flex justify-content-center align-items-center bg-light"><span class="text-muted">Error memuat data</span></div>';
+                    document.getElementById('modalFeatures').innerHTML = '';
+                    document.getElementById('modalSpecs').innerHTML = '<tr><td colspan="3" class="text-center text-danger">Error memuat spesifikasi.</td></tr>';
+                    currentModalProductName = '';
+                    if (modalSwiper) {
+                        modalSwiper.destroy(true, true);
+                        modalSwiper = null;
+                    }
+                    return;
+                }
+
+                const product = productData.products[index];
+                const details = productDetails[index];
+
+                currentModalProductName = product.name;
+                document.getElementById('modalProductName').textContent = product.name;
+                document.getElementById('modalDescription').textContent = details.description || "Deskripsi tidak tersedia.";
+
+                const galleryWrapper = document.getElementById('modalGallery');
+                galleryWrapper.innerHTML = '';
+                let imagesLoadedCount = 0;
+                let totalImages = details.gallery ? details.gallery.length : 0;
+
+                const initializeModalSwiper = () => {
+                    if (modalSwiper) {
+                        modalSwiper.destroy(true, true);
+                    }
+                    modalSwiper = new Swiper('.swiper-modal', {
+                        loop: totalImages > 1,
+                        pagination: { el: '.modal-pagination', clickable: true }, // <-- Ganti ini
+                        navigation: { nextEl: '.modal-button-next', prevEl: '.modal-button-prev' },
+                        observer: true,
+                        observeParents: true
+                    });
+                };
+
+                if (details.gallery && totalImages > 0) {
+                    details.gallery.forEach(imgUrl => {
+                        const slideDiv = document.createElement('div');
+                        slideDiv.className = 'swiper-slide';
+                        slideDiv.style.backgroundImage = `url(${imgUrl})`;
+                        slideDiv.style.backgroundPosition = 'center';
+                        slideDiv.style.backgroundSize = 'contain'; /* <-- UBAH INI */
+                        slideDiv.style.backgroundRepeat = 'no-repeat'; /* <-- TAMBAHKAN INI */
+
+                        // --- TAMBAHAN: Event Listener untuk Klik ---
+                        slideDiv.addEventListener('click', function () {
+                            fullPreviewImage.src = imgUrl; // Set sumber gambar preview
+                            previewModal.show(); // Tampilkan modal preview
+                        });
+                        slideDiv.onclick = function () {
+                            // Set src gambar preview
+                            fullPreviewImage.src = imgUrl;
+                            // Tampilkan modal
+                            myPreviewModal.show();
+                        };
+                        // -----------------------------------------
+                        galleryWrapper.appendChild(slideDiv);
+                    });
+                    initializeModalSwiper();
+                } else {
+                    galleryWrapper.innerHTML = `<div class="swiper-slide d-flex justify-content-center align-items-center bg-light"><span class="text-muted">Gambar tidak tersedia</span></div>`;
+                    initializeModalSwiper();
+                }
+
+                const featuresList = document.getElementById('modalFeatures');
+                featuresList.innerHTML = '';
+                featuresList.innerHTML += `<li><i class="bi ${product.solar_heater === 'yes' ? 'bi-check-circle-fill text-success' : 'bi-x-circle-fill text-danger'} me-2"></i>Solar Water Heater ${product.solar_heater === 'yes' ? 'Included' : 'Not Included'}</li>`;
+                featuresList.innerHTML += `<li><i class="bi ${product.ev_charger === 'yes' ? 'bi-check-circle-fill text-success' : 'bi-x-circle-fill text-danger'} me-2"></i>EV Charger Ready ${product.ev_charger === 'yes' ? 'Installation' : 'Not Ready'}</li>`;
+
+                const specsBody = document.getElementById('modalSpecs');
+                specsBody.innerHTML = '';
+                const specArray = product.specification?.SpesifikasiRumah || product.specification?.SpesifikasiRukan || [];
+
+                if (specArray.length > 0) {
+                    const groupedSpecs = specArray.reduce((acc, item) => {
+                        if (!acc[item.Kategori]) {
+                            acc[item.Kategori] = [];
+                        }
+                        acc[item.Kategori].push(item);
+                        return acc;
+                    }, {});
+
+                    Object.keys(groupedSpecs).forEach((kategori, index) => {
+                        groupedSpecs[kategori].forEach((item, subIndex) => {
+                            let rowHtml = '<tr>';
+                            if (subIndex === 0) {
+                                rowHtml += `<th scope="row" rowspan="${groupedSpecs[kategori].length}">${kategori}</th>`;
+                            }
+                            rowHtml += `<td>${item.Subkategori || '-'}</td>`;
+                            rowHtml += `<td>${item.Spesifikasi}</td>`;
+                            rowHtml += '</tr>';
+                            specsBody.innerHTML += rowHtml;
+                        });
+                    });
+                } else {
+                    specsBody.innerHTML = '<tr><td colspan="3" class="text-center text-muted">Spesifikasi tidak tersedia.</td></tr>';
+                }
+            });
+
+
+            document.getElementById('contactSalesBtn').addEventListener('click', (event) => {
+                event.preventDefault();
+                const modalInstance = bootstrap.Modal.getInstance(detailModal);
+
+                // Gunakan fungsi direct WA baru
+                openWaLinkDirect(currentModalProductName);
+
+                modalInstance.hide(); // Langsung tutup modal, tidak perlu cek 'success'
+            });
+
+
+            if (productList) {
+                productList.addEventListener('click', function (event) {
+                    const salesButton = event.target.closest('.btn-sales-whatsapp');
+
+                    if (salesButton) {
+                        event.preventDefault();
+                        const productName = salesButton.getAttribute('data-product-name');
+
+                        // Gunakan fungsi direct WA baru
+                        openWaLinkDirect(productName);
+
+                        // Tidak perlu cek 'success' atau scroll ke form
+                    }
+                });
+            }
+
+
+            const fabButton = document.querySelector('.fab-whatsapp');
+            if (fabButton) {
+                fabButton.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    // Gunakan fungsi direct WA baru (tanpa nama produk)
+                    openWaLinkDirect();
+
+                    // Tidak perlu cek 'success' atau scroll ke form
+                });
+            }
+
+
+            const themeSwitch = document.getElementById('themeSwitch');
+            const htmlEl = document.documentElement;
+
+            const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
+            htmlEl.setAttribute('data-bs-theme', currentTheme);
+            if (currentTheme === 'dark') {
+                themeSwitch.checked = true;
+            }
+
+            themeSwitch.addEventListener('change', function () {
+                if (this.checked) {
+                    htmlEl.setAttribute('data-bs-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    htmlEl.setAttribute('data-bs-theme', 'light');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                    navbar.classList.remove('navbar-dark', 'bg-transparent');
+                    navbar.classList.add(document.documentElement.getAttribute('data-bs-theme') === 'dark' ? 'navbar-dark' : 'navbar-light');
+                } else {
+                    navbar.classList.remove('scrolled');
+                    navbar.classList.remove('navbar-light');
+                    navbar.classList.add('navbar-dark', 'bg-transparent');
+                }
+            });
+
+            function initObservers() {
+                const animatedElements = document.querySelectorAll('.animate-on-scroll');
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+
+                            const counter = entry.target.querySelector('.counter');
+                            if (counter && !counter.classList.contains('animated')) {
+                                const target = +counter.getAttribute('data-target');
+                                counter.innerText = '0';
+                                counter.classList.add('animated');
+                                const updateCount = () => {
+                                    const current = +counter.innerText;
+                                    const increment = target / 200;
+                                    if (current < target) {
+                                        counter.innerText = `${Math.ceil(current + increment)}`;
+                                        setTimeout(updateCount, 10);
+                                    } else {
+                                        counter.innerText = target;
+                                    }
+                                };
+                                updateCount();
+                            }
+                        }
+                    });
+                }, { threshold: 0.15 });
+
+                animatedElements.forEach(el => observer.observe(el));
+
+                const staggerContainers = document.querySelectorAll('[data-stagger-children]');
+                staggerContainers.forEach(container => {
+                    const children = container.querySelectorAll('.animate-on-scroll');
+                    children.forEach((child, index) => {
+                        child.style.transitionDelay = `${index * 150}ms`;
+                    });
+                });
+            }
+
+            initObservers(); // Panggil setelah konten dinamis ditambahkan
+
+            const parallaxImage = document.querySelector('[data-parallax]');
+            if (parallaxImage) {
+                window.addEventListener('scroll', function () {
+                    const scrolled = window.pageYOffset;
+                    const rate = scrolled * 0.3;
+                    parallaxImage.style.transform = `translateY(${rate}px) scale(1.1)`;
+                });
+            }
+
+            // --- SINKRONISASI FORM BAR DAN FORM KONTAK ---
+            const waName = document.getElementById('waName');
+            const waEmail = document.getElementById('waEmail');
+            const waPhone = document.getElementById('waPhone');
+
+            const fullName = document.getElementById('fullName');
+            const emailAddress = document.getElementById('emailAddress');
+            const whatsappNumber = document.getElementById('whatsappNumber');
+
+            // Sync Nama (2-arah)
+            if (waName && fullName) {
+                waName.addEventListener('input', function () {
+                    fullName.value = this.value;
+                });
+                fullName.addEventListener('input', function () {
+                    waName.value = this.value;
+                });
+            }
+
+            // Sync Email (2-arah)
+            if (waEmail && emailAddress) {
+                waEmail.addEventListener('input', function () {
+                    emailAddress.value = this.value;
+                });
+                emailAddress.addEventListener('input', function () {
+                    waEmail.value = this.value;
+                });
+            }
+
+            // Sync Phone (2-arah)
+            if (waPhone && whatsappNumber) {
+                waPhone.addEventListener('input', function () {
+                    whatsappNumber.value = this.value;
+                });
+                whatsappNumber.addEventListener('input', function () {
+                    waPhone.value = this.value;
+                });
+            }
+            // --- AKHIR SINKRONISASI ---
+
+
+            // --- FORM VALIDATION & SUBMISSION ---
+            const forms = document.querySelectorAll('form[novalidate]');
+
+            forms.forEach(form => {
+                form.addEventListener('submit', event => {
+                    event.preventDefault();
+                    form.classList.add('was-validated');
+
+                    if (form.id === 'waFormBar') {
+                        trySendWaFromBar();
+                    } else if (form.id === 'mainContactForm') {
+                        if (form.checkValidity()) {
+                            const name = document.getElementById('fullName').value;
+                            const email = document.getElementById('emailAddress').value;
+                            const phone = document.getElementById('whatsappNumber').value;
+                            const message = `Halo PIC MEDAN, saya mengisi form kontak di website dan ingin dihubungi:\n\n` +
+                                `Nama: ${name}\n` +
+                                `Email: ${email}\n` +
+                                `No. WhatsApp: ${phone}\n\n` +
+                                `Terima kasih.`;
+
+                            // Mengarahkan ke nomor Sales Anda, bukan nomor user
+                            const salesWaNumber = '6281290907080';
+
+                            const waUrl = `https://api.whatsapp.com/send/?phone=${salesWaNumber}&text=${encodeURIComponent(message)}`;
+                            window.open(waUrl, '_blank');
+
+                            form.reset();
+                            form.classList.remove('was-validated');
+                            // Juga reset form bar jika main form di-reset
+                            document.getElementById('waFormBar').reset();
+                            document.getElementById('waFormBar').classList.remove('was-validated');
+
+                        }
+                    }
+                }, false);
+            });
+
+        });
+
+        // --- FUNGSI BARU UNTUK WA DIRECT TANPA VALIDASI ---
+        function openWaLinkDirect(productName = null) {
+            const salesWaNumber = '6281290907080';
+
+            // Ambil data dari form, tapi jangan validasi
+            const name = document.getElementById('waName').value;
+            const email = document.getElementById('waEmail').value;
+            const phone = document.getElementById('waPhone').value;
+
+            let message = '';
+
+            if (productName) {
+                // Pesan untuk tombol di detail produk atau kartu produk
+                message = `Halo PIC MEDAN, saya tertarik dengan properti: ${productName}.`;
+            } else {
+                // Pesan umum untuk tombol FAB
+                message = `Halo PIC MEDAN, saya mengunjungi website Anda dan ingin bertanya.`;
+            }
+
+            // Tambahkan info pengguna HANYA JIKA mereka sudah mengisinya
+            if (name || email || phone) {
+                message += `\n\nBerikut data saya (opsional):\n`;
+                if (name) message += `Nama: ${name}\n`;
+                if (email) message += `Email: ${email}\n`;
+                if (phone) message += `No. WhatsApp: ${phone}\n`;
+                message += `\nTerima kasih.`;
+            } else {
+                message += `\n\nMohon info lebih lanjut. Terima kasih.`;
+            }
+
+            const waUrl = `https://api.whatsapp.com/send/?phone=${salesWaNumber}&text=${encodeURIComponent(message)}`;
+            window.open(waUrl, '_blank');
+        }
+        // --- AKHIR FUNGSI BARU ---
+    </script>
+</body>
+
+</html>

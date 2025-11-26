@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIC MEDAN - Promo Spesial</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bs-primary: #0E2744;
+            --bs-secondary: #337FD7;
+            --color-accent1: #F8D68C;
+            --color-accent2: #FF954B;
+            --color-accent3: #CB3922;
+
+            --font-primary: 'Playfair Display', serif;
+            --font-secondary: 'Inter', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-secondary);
+            background-color: var(--bs-body-bg);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-primary);
+            font-weight: 700;
+        }
+
+        .page-header {
+            position: relative;
+            height: 50vh;
+            background-image: url('promo/banner.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .page-header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(14, 39, 68, 0.7);
+        }
+        
+        .page-header-content {
+            z-index: 1;
+        }
+
+        .page-header-content h1 {
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .promo-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--bs-border-color);
+        }
+
+        .promo-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .btn-outline-primary {
+            --bs-btn-color: var(--bs-secondary);
+            --bs-btn-border-color: var(--bs-secondary);
+            --bs-btn-hover-bg: var(--bs-secondary);
+            --bs-btn-hover-border-color: var(--bs-secondary);
+        }
+        
+        .btn-primary {
+            --bs-btn-bg: var(--bs-secondary);
+            --bs-btn-border-color: var(--bs-secondary);
+            --bs-btn-hover-bg: #2a6ab5;
+            --bs-btn-hover-border-color: #2a6ab5;
+        }
+
+        .fab-whatsapp {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: #FFF;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1050;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        .fab-whatsapp:hover {
+            transform: scale(1.1);
+            color: #FFF;
+            background-color: #128C7E;
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Styling untuk Toggle Tema di Light Mode */
+        [data-bs-theme="light"] .form-check-input:not(:checked) {
+            background-color: #dee2e6; /* Warna abu-abu terang */
+            border-color: #adb5bd; /* Border abu-abu */
+        }
+
+        /* Memberi jarak pada item menu navigasi */
+        .navbar-nav .nav-item {
+            margin-left: 0.5rem; /* Jarak kiri */
+            margin-right: 0.5rem; /* Jarak kanan */
+        }
+
+        .py-5 {
+            padding-bottom: 1rem !important;
+        }
+
+        /* Opsional: Sedikit lebih renggang di layar besar */
+        @media (min-width: 992px) { /* lg breakpoint */
+            .navbar-nav .nav-item {
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+        }
+        img.me-2.logo {
+            margin-right: 1.5rem !important;
+        }
+        @media (max-width: 768px) {
+            .py-5 {
+                padding-top: 1rem !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light" style="background-color: var(--bs-body-bg); box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><img src="logo.svg" alt="Logo PIC Medan" class="me-2 logo" style="height: 32px;">PIC MEDAN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="promo.html">Promo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items:center">
+                    <i class="bi bi-moon-stars-fill me-2"></i>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="themeSwitch">
+                        <label class="form-check-label" for="themeSwitch"></label>
+                    </div>
+                     <i class="bi bi-brightness-high-fill"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="page-header-content animate-on-scroll is-visible">
+            <h1 class="display-4">Promosi Spesial</h1>
+            <p class="lead">Jangan lewatkan penawaran terbaik untuk memiliki hunian impian Anda.</p>
+        </div>
+    </header>
+
+    <main class="py-5">
+        <section id="promo-list" class="container my-5">
+            <div id="promoContainer" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" data-stagger-children="true">
+            </div>
+        </section>
+    </main>
+    
+    <footer class="py-5" style="background-color: #0E2744; color: #adb5bd;">
+        <div class="container text-center text-md-start">
+            <div class="row gy-4">
+                <div class="col-lg-8 col-md-6">
+                    <h5 class="text-white"><img src="logo.svg" alt="Logo PIC Medan" class="me-2 logo" style="height: 32px;">Pesona Indah Cemara</h5>
+                    <p>Pesona Indah Cemara hadir sebagai simbol gaya hidup modern di Kota Medan, menghadirkan keseimbangan sempurna antara kenyamanan hunian hijau dan ruang terbuka hijau yang luas dan akses mudah ke pusat kota. Sebuah kawasan terpadu yang dirancang untuk memberikan pengalaman hidup yang berkelas dan berkelanjutan.</p>
+                    <div class="mt-4">
+                        <a href="https://www.instagram.com/pic_medan/" target="_blank" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a>
+                    </div>
+                    <p class="pic_bold" style="margin-top: 1rem; margin-bottom: 0rem;">Pesona Indah Cemara</p>by <img src="logo_asg.svg" alt="Logo ASG" class="me-2 logo" style="height: 14px;">
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="text-white">Hubungi Kami</h5>
+                     <ul class="list-unstyled">
+                        <li><i class="bi bi-telephone-fill me-2"></i> 0812-9090-7080</li>
+                        <li><i class="bi bi-envelope-fill me-2"></i> sales@picmedan.com</li>
+                        <li><i class="bi bi-geo-alt-fill me-2"></i> Supermarket Brastagi, Jl. Cemara, Pulo Brayan Bengkel Baru, Kec. Medan Tim., Kota Medan, Sumatera Utara</li>
+                    </ul>
+                </div>
+                </div>
+            <div class="text-center pt-4 mt-4 border-top border-secondary">
+                <p>&copy; 2025 PIC MEDAN All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="modal fade" id="promoDetailModal" tabindex="-1" aria-labelledby="promoDetailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="promoDetailModalLabel">Detail Promo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalPromoImage" src="" class="img-fluid rounded mb-3" alt="Promo Image">
+                    <h3 id="modalPromoTitle"></h3>
+                    <p id="modalPromoDescription"></p>
+                    <hr id="modalPromoSeparator">
+                    <strong id="modalPromoTermsLabel" style="display: none;">Syarat & Ketentuan:</strong>
+                    <ul id="modalPromoTerms" style="display: none;">
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                    <a href="index.html#contact" class="btn btn-primary" id="modalPromoActionBtn">Hubungi Kami</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/6281234567890?text=Halo,%20saya%20tertarik%20dengan%20promo%20properti%20Anda." class="fab-whatsapp" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        
+        const promoData = { "promos": [ { "image": "promo/prom1.jpeg", "title": "Gratis Furnitur Lengkap", "subtitle": "Hingga 31 Des 2025", "button_text": "Klaim Promo", "button_link": "index.html#contact", "details": "Dapatkan paket furnitur lengkap senilai puluhan juta rupiah untuk setiap pembelian unit tipe Amsterdam atau Barcelona selama periode promo. Furnitur meliputi set sofa, meja makan, tempat tidur, lemari, dan kitchen set standar. *Syarat & ketentuan berlaku." }, { "image": "promo/prom2.jpeg", "title": "Gratis Smart Home System", "subtitle": "Untuk Cluster Amsterdam", "button_text": "Info Lanjut", "button_link": "index.html#contact", "details": "Jadikan rumah Anda lebih pintar! Gratis instalasi sistem smart home basic (smart lock, lampu pintar, sensor gerak) khusus untuk pembelian unit di Cluster Amsterdam. Upgrade paket tersedia dengan biaya tambahan." }, { "image": "promo/prom3.jpeg", "title": "KPR Bunga Rendah 2.75%", "subtitle": "Penawaran Terbatas", "button_text": "Info Lanjut", "button_link": "index.html#contact", "details": "Nikmati suku bunga KPR spesial 2.75% fixed selama 3 tahun pertama, bekerja sama dengan bank partner kami. Penawaran ini terbatas untuk 20 aplikasi KPR pertama yang disetujui. Segera ajukan KPR Anda!" }, { "image": "promo/prom4.jpeg", "title": "Gratis Biaya AJB & Notaris", "subtitle": "Untuk 50 Pembeli Pertama", "button_text": "Klaim Promo", "button_link": "index.html#contact", "details": " Hemat biaya kepemilikan rumah! Kami tanggung 100% biaya Akta Jual Beli (AJB) dan jasa notaris untuk 50 pembeli pertama unit apa saja di PIC MEDAN selama periode promo berlangsung." }, { "image": "promo/prom5.jpeg", "title": "Cashback Booking Fee 100%", "subtitle": "Jika KPR Ditolak", "button_text": "Info Lanjut", "button_link": "index.html#contact", "details": "Booking unit impian Anda tanpa khawatir! Jika pengajuan KPR Anda ditolak oleh bank, kami akan mengembalikan 100% booking fee yang telah Anda bayarkan. *Wajib menyertakan surat penolakan resmi dari bank." }, { "image": "promo/prom6.jpeg", "title": "Hadiah Logam Mulia 10gr", "subtitle": "Pembelian Tunai Keras", "button_text": "Klaim Promo", "button_link": "index.html#contact", "details": "Investasi sekaligus dapat bonus! Dapatkan hadiah langsung berupa logam mulia Antam 10 gram untuk setiap pembelian unit dengan metode pembayaran tunai keras (cash keras)." }, { "image": "promo/prom7.jpeg", "title": "Diskon DP 10%", "subtitle": "Hingga 30 Nov 2025", "button_text": "Klaim Promo", "button_link": "index.html#contact", "details": "Miliki rumah impian lebih ringan dengan diskon spesial 10% untuk Down Payment (DP). Promo berlaku untuk semua tipe unit dengan skema pembayaran KPR Express DP atau Tunai Bertahap." } ] };
+
+        const promoContainer = document.getElementById('promoContainer');
+
+        /* ============================================================
+        KODE LAMA UNTUK MENAMPILKAN PROMO (SESUAI PERMINTAAN, TIDAK DIHAPUS)
+        ============================================================
+        
+        promoData.promos.forEach((promo, index) => {
+            const card = document.createElement('div');
+            card.className = 'col animate-on-scroll';
+            card.innerHTML = `
+                <div class="card h-100 promo-card shadow-sm">
+                    <img src="${promo.image}" class="card-img-top" alt="${promo.title}" style="height: 250px; object-fit: cover;">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">${promo.title}</h5>
+                        <p class="card-text text-muted">${promo.subtitle}</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-outline-primary w-100" data-bs-toggle="modal" data-bs-target="#promoDetailModal" data-index="${index}">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>`;
+            promoContainer.appendChild(card);
+        });
+        */
+
+        // ============================================================
+        // KODE BARU UNTUK MENAMPILKAN "COMING SOON"
+        // ============================================================
+        
+        // Hapus class grid agar "Coming Soon" bisa ditengah
+        promoContainer.classList.remove('row-cols-1', 'row-cols-md-2', 'row-cols-lg-3', 'g-4');
+        promoContainer.classList.add('justify-content-center'); // Tambah class untuk centering
+
+        // Buat elemen untuk "Coming Soon"
+        const comingSoonElement = document.createElement('div');
+        comingSoonElement.className = 'col-12 text-center my-5 py-5'; // Pakai col-12 agar full width
+        comingSoonElement.innerHTML = `
+            <h2 class="animate-on-scroll">Promo Akan Segera Hadir!</h2>
+            <p class="lead animate-on-scroll" style="transition-delay: 150ms;">Nantikan penawaran spesial dan promosi menarik dari kami.</p>
+        `;
+        promoContainer.appendChild(comingSoonElement);
+        // ============================================================
+
+        const promoModal = document.getElementById('promoDetailModal');
+        promoModal.addEventListener('show.bs.modal', function (event) {
+            const button = event.relatedTarget;
+            if (button) { // Cek apakah tombol ada (untuk menghindari error)
+                const promoIndex = button.getAttribute('data-index');
+                const data = promoData.promos[promoIndex];
+                
+                document.getElementById('modalPromoImage').src = data.image;
+                document.getElementById('modalPromoTitle').textContent = data.title;
+                document.getElementById('modalPromoDescription').textContent = data.details;
+                
+                // Hide the old terms list as new data is a single 'details' block
+                document.getElementById('modalPromoTermsLabel').style.display = 'none';
+                document.getElementById('modalPromoTerms').style.display = 'none';
+                document.getElementById('modalPromoSeparator').style.display = 'none';
+                
+                // Update modal footer button
+                const actionBtn = document.getElementById('modalPromoActionBtn');
+                actionBtn.textContent = data.button_text;
+                actionBtn.href = data.button_link;
+            }
+        });
+
+        const themeSwitch = document.getElementById('themeSwitch');
+        const htmlEl = document.documentElement;
+        
+        const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light';
+        htmlEl.setAttribute('data-bs-theme', currentTheme);
+        if (currentTheme === 'dark') {
+            themeSwitch.checked = true;
+        }
+
+        themeSwitch.addEventListener('change', function() {
+            if(this.checked) {
+                htmlEl.setAttribute('data-bs-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                htmlEl.setAttribute('data-bs-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+        
+        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.15
+        });
+
+        animatedElements.forEach(el => observer.observe(el));
+        
+        const staggerContainers = document.querySelectorAll('[data-stagger-children]');
+        staggerContainers.forEach(container => {
+            const children = container.querySelectorAll('.animate-on-scroll');
+            children.forEach((child, index) => {
+                child.style.transitionDelay = `${index * 150}ms`;
+            });
+        });
+    });
+    </script>
+</body>
+</html>
