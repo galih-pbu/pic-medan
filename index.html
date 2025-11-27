@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id" data-bs-theme="light">
 
 <head>
@@ -33,7 +33,7 @@
             --color-accent1: #F8D68C;
             --color-accent2: #FF954B;
             --color-accent3: #CB3922;
-            --color-asia: #87000f;
+            --color-asia: #470008;
             --color-asia-light: #c50113;
             --color-asia-accent: #ff6b6b;
 
@@ -85,6 +85,7 @@
             color: var(--color-asia-accent) !important;
         }
 
+        /* BACKUP - RED button for Asia modal
         .modal-content.cluster-asia .btn-primary {
             background-color: var(--color-asia);
             border-color: var(--color-asia-accent);
@@ -100,6 +101,16 @@
         .modal-content.cluster-asia .btn-primary i {
             color: white;
         }
+        */
+
+        /* CURRENT - BLUE button for Asia modal (same as Eropa) */
+        /* Asia modal button now uses default Bootstrap primary styles (blue) */
+
+        /* BACKUP - Modal Asia RED background */
+        /* Use var(--color-asia) for background-color in modalContent.style.backgroundColor */
+        
+        /* CURRENT - Modal Asia uses BLUE background (same as Eropa) */
+        /* This is applied via JavaScript by using var(--bs-primary) for both clusters */
 
         /* Table specifications styling */
         .specs-table {
@@ -149,6 +160,7 @@
         }
 
         /* Asia cluster table */
+        /* BACKUP - RED VERSION
         .modal-content.cluster-asia .specs-table thead {
             background-color: #9e010f !important;
         }
@@ -161,6 +173,22 @@
         .modal-content.cluster-asia .specs-table tbody tr:hover th,
         .modal-content.cluster-asia .specs-table tbody tr:hover td {
             background-color: rgba(158, 1, 15, 0.3);
+        }
+        */
+
+        /* CURRENT - BLUE VERSION (same as Eropa) */
+        .modal-content.cluster-asia .specs-table thead {
+            background-color: #337FD7 !important;
+        }
+
+        .modal-content.cluster-asia .specs-table thead th {
+            color: #ffffff !important;
+            background-color: #337FD7 !important;
+        }
+
+        .modal-content.cluster-asia .specs-table tbody tr:hover th,
+        .modal-content.cluster-asia .specs-table tbody tr:hover td {
+            background-color: rgba(51, 127, 215, 0.3);
         }
 
         /* Icon colors for Asia cluster */
@@ -966,7 +994,7 @@
                     <p class="lead text-muted">Pilihan properti terbaik yang dirancang untuk setiap kebutuhan.</p>
                 </div>
 
-                <ul class="nav nav-pills justify-content-center mb-5" id="product-filter-tabs" data-aos="fade-up"
+                <!-- <ul class="nav nav-pills justify-content-center mb-5" id="product-filter-tabs" data-aos="fade-up"
                     data-aos-delay="100">
                     <li class="nav-item">
                         <a class="nav-link active" href="#" data-filter="Eropa">Cluster Eropa</a>
@@ -974,7 +1002,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#" data-filter="Asia">Cluster Asia</a>
                     </li>
-                </ul>
+                </ul> -->
                 <div id="productList" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"
                     data-stagger-children="true">
                 </div>
@@ -2879,7 +2907,9 @@
 
                 // Apply cluster-specific styling to modal
                 const modalContent = detailModal.querySelector('.modal-content');
-                const modalBgColor = product.cluster_type === 'asia' ? 'var(--color-asia)' : 'var(--bs-primary)';
+                // BACKUP - RED: const modalBgColor = product.cluster_type === 'asia' ? 'var(--color-asia)' : 'var(--bs-primary)';
+                // CURRENT - BLUE for both clusters
+                const modalBgColor = 'var(--bs-primary)';
                 modalContent.style.backgroundColor = modalBgColor;
                 
                 // Add cluster class to modal for icon colors
